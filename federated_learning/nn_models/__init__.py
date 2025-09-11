@@ -1,0 +1,4 @@
+from federated_learning.nn_models.mnist_nn import MNIST_NN
+from federated_learning.nn_models.cifar10_nn import CIFAR10_NN
+from federated_learning.nn_models.cifar100_nn import CIFAR100_NN
+from federated_learning.nn_models.emnist_nn import EMNIST_NN

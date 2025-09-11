@@ -1,0 +1,275 @@
+2025-04-07 20:17:36 - INFO - Starting Federated Learning Simulation: dataset type: iid, dataset name: mnist, strategy: FedAvg(accept_failures=True), rounds: 20, clients: 20
+2025-04-07 20:17:36 - WARNING - DEPRECATED FEATURE: flwr.simulation.start_simulation() is deprecated.
+	Instead, use the `flwr run` CLI command to start a local simulation in your Flower app, as shown for example below:
+
+		$ flwr new  # Create a new Flower app from a template
+
+		$ flwr run  # Run the Flower app in Simulation Mode
+
+	Using `start_simulation()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2025-04-07 20:17:36 - INFO - Starting Flower simulation, config: num_rounds=20, no round_timeout
+2025-04-07 20:17:39 - INFO - Flower VCE: Ray initialized with resources: {'accelerator_type:G': 1.0, 'node:__internal_head__': 1.0, 'CPU': 24.0, 'object_store_memory': 6561141964.0, 'node:127.0.0.1': 1.0, 'memory': 13122283931.0, 'GPU': 1.0}
+2025-04-07 20:17:39 - INFO - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+2025-04-07 20:17:39 - INFO - No `client_resources` specified. Using minimal resources for clients.
+2025-04-07 20:17:39 - INFO - Flower VCE: Resources for each Virtual Client: {'num_cpus': 1, 'num_gpus': 0.0}
+2025-04-07 20:17:39 - INFO - Flower VCE: Creating VirtualClientEngineActorPool with 24 actors
+2025-04-07 20:17:39 - INFO - [INIT]
+2025-04-07 20:17:39 - INFO - Requesting initial parameters from one random client
+2025-04-07 20:17:42 - INFO - Received initial parameters from one random client
+2025-04-07 20:17:42 - INFO - Starting evaluation of initial global parameters
+2025-04-07 20:17:42 - INFO - Evaluation returned no results (`None`)
+2025-04-07 20:17:42 - INFO - 
+2025-04-07 20:17:42 - INFO - [ROUND 1]
+2025-04-07 20:17:42 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:17:50 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:17:50 - WARNING - No fit_metrics_aggregation_fn provided
+2025-04-07 20:17:50 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:17:50 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:17:50 - WARNING - No evaluate_metrics_aggregation_fn provided
+2025-04-07 20:17:50 - INFO - 
+2025-04-07 20:17:50 - INFO - [ROUND 2]
+2025-04-07 20:17:50 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:17:54 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:17:54 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:17:54 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:17:54 - INFO - 
+2025-04-07 20:17:54 - INFO - [ROUND 3]
+2025-04-07 20:17:54 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:17:58 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:17:58 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:17:59 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:17:59 - INFO - 
+2025-04-07 20:17:59 - INFO - [ROUND 4]
+2025-04-07 20:17:59 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:02 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:18:02 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:03 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:18:03 - INFO - 
+2025-04-07 20:18:03 - INFO - [ROUND 5]
+2025-04-07 20:18:03 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:07 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:18:07 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:07 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:18:07 - INFO - 
+2025-04-07 20:18:07 - INFO - [ROUND 6]
+2025-04-07 20:18:07 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:11 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:18:11 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:11 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:18:11 - INFO - 
+2025-04-07 20:18:11 - INFO - [ROUND 7]
+2025-04-07 20:18:11 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:15 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:18:15 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:15 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:18:15 - INFO - 
+2025-04-07 20:18:15 - INFO - [ROUND 8]
+2025-04-07 20:18:15 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:19 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:18:19 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:20 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:18:20 - INFO - 
+2025-04-07 20:18:20 - INFO - [ROUND 9]
+2025-04-07 20:18:20 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:23 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:18:23 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:24 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:18:24 - INFO - 
+2025-04-07 20:18:24 - INFO - [ROUND 10]
+2025-04-07 20:18:24 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:27 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:18:27 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:28 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:18:28 - INFO - 
+2025-04-07 20:18:28 - INFO - [ROUND 11]
+2025-04-07 20:18:28 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:32 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:18:32 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:32 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:18:32 - INFO - 
+2025-04-07 20:18:32 - INFO - [ROUND 12]
+2025-04-07 20:18:32 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:36 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:18:36 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:37 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:18:37 - INFO - 
+2025-04-07 20:18:37 - INFO - [ROUND 13]
+2025-04-07 20:18:37 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:40 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:18:40 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:41 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:18:41 - INFO - 
+2025-04-07 20:18:41 - INFO - [ROUND 14]
+2025-04-07 20:18:41 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:45 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:18:45 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:45 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:18:45 - INFO - 
+2025-04-07 20:18:45 - INFO - [ROUND 15]
+2025-04-07 20:18:45 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:49 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:18:49 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:50 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:18:50 - INFO - 
+2025-04-07 20:18:50 - INFO - [ROUND 16]
+2025-04-07 20:18:50 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:54 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:18:54 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:54 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:18:54 - INFO - 
+2025-04-07 20:18:54 - INFO - [ROUND 17]
+2025-04-07 20:18:54 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:58 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:18:58 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:18:58 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:18:58 - INFO - 
+2025-04-07 20:18:58 - INFO - [ROUND 18]
+2025-04-07 20:18:58 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:19:02 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:19:02 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:19:03 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:19:03 - INFO - 
+2025-04-07 20:19:03 - INFO - [ROUND 19]
+2025-04-07 20:19:03 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:19:06 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:19:06 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:19:07 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:19:07 - INFO - 
+2025-04-07 20:19:07 - INFO - [ROUND 20]
+2025-04-07 20:19:07 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:19:11 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:19:11 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:19:11 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:19:11 - INFO - 
+2025-04-07 20:19:11 - INFO - [SUMMARY]
+2025-04-07 20:19:11 - INFO - Run finished 20 round(s) in 88.63s
+2025-04-07 20:19:11 - INFO - 	History (loss, distributed):
+2025-04-07 20:19:11 - INFO - 		round 1: 0.3141937785607297
+2025-04-07 20:19:11 - INFO - 		round 2: 0.1295926315258839
+2025-04-07 20:19:11 - INFO - 		round 3: 0.09170830500625016
+2025-04-07 20:19:11 - INFO - 		round 4: 0.07205768152689415
+2025-04-07 20:19:11 - INFO - 		round 5: 0.06126983712720176
+2025-04-07 20:19:11 - INFO - 		round 6: 0.055123258665662436
+2025-04-07 20:19:11 - INFO - 		round 7: 0.04937645267996231
+2025-04-07 20:19:11 - INFO - 		round 8: 0.04360351547315986
+2025-04-07 20:19:11 - INFO - 		round 9: 0.0421088746718624
+2025-04-07 20:19:11 - INFO - 		round 10: 0.03906180593812678
+2025-04-07 20:19:11 - INFO - 		round 11: 0.03667251336416939
+2025-04-07 20:19:11 - INFO - 		round 12: 0.03580597754591963
+2025-04-07 20:19:11 - INFO - 		round 13: 0.03287389209863249
+2025-04-07 20:19:11 - INFO - 		round 14: 0.03292261341480298
+2025-04-07 20:19:11 - INFO - 		round 15: 0.032168388679565396
+2025-04-07 20:19:11 - INFO - 		round 16: 0.03066284184756114
+2025-04-07 20:19:11 - INFO - 		round 17: 0.029536023947395053
+2025-04-07 20:19:11 - INFO - 		round 18: 0.02891993577352423
+2025-04-07 20:19:11 - INFO - 		round 19: 0.028370371238452208
+2025-04-07 20:19:11 - INFO - 		round 20: 0.028216975572644288
+2025-04-07 20:19:11 - INFO - 	History (metrics, distributed, evaluate):
+2025-04-07 20:19:11 - INFO - 	{'accuracy': [(1, 0.9028),
+2025-04-07 20:19:11 - INFO - 	              (2, 0.9612),
+2025-04-07 20:19:11 - INFO - 	              (3, 0.9709),
+2025-04-07 20:19:11 - INFO - 	              (4, 0.9772),
+2025-04-07 20:19:11 - INFO - 	              (5, 0.9807),
+2025-04-07 20:19:11 - INFO - 	              (6, 0.9826),
+2025-04-07 20:19:11 - INFO - 	              (7, 0.9836),
+2025-04-07 20:19:11 - INFO - 	              (8, 0.9857),
+2025-04-07 20:19:11 - INFO - 	              (9, 0.9858),
+2025-04-07 20:19:11 - INFO - 	              (10, 0.9869),
+2025-04-07 20:19:11 - INFO - 	              (11, 0.9876),
+2025-04-07 20:19:11 - INFO - 	              (12, 0.9877),
+2025-04-07 20:19:11 - INFO - 	              (13, 0.9882),
+2025-04-07 20:19:11 - INFO - 	              (14, 0.9888),
+2025-04-07 20:19:11 - INFO - 	              (15, 0.9892),
+2025-04-07 20:19:11 - INFO - 	              (16, 0.9893),
+2025-04-07 20:19:11 - INFO - 	              (17, 0.9898),
+2025-04-07 20:19:11 - INFO - 	              (18, 0.9892),
+2025-04-07 20:19:11 - INFO - 	              (19, 0.9904),
+2025-04-07 20:19:11 - INFO - 	              (20, 0.99)]}
+2025-04-07 20:19:11 - INFO - 
+2025-04-07 20:19:12 - INFO - Starting Federated Learning Simulation: dataset type: iid, dataset name: cifar10, strategy: FedAvg(accept_failures=True), rounds: 20, clients: 20
+2025-04-07 20:19:12 - WARNING - DEPRECATED FEATURE: flwr.simulation.start_simulation() is deprecated.
+	Instead, use the `flwr run` CLI command to start a local simulation in your Flower app, as shown for example below:
+
+		$ flwr new  # Create a new Flower app from a template
+
+		$ flwr run  # Run the Flower app in Simulation Mode
+
+	Using `start_simulation()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2025-04-07 20:19:12 - INFO - Starting Flower simulation, config: num_rounds=20, no round_timeout
+2025-04-07 20:19:15 - INFO - Flower VCE: Ray initialized with resources: {'accelerator_type:G': 1.0, 'node:__internal_head__': 1.0, 'CPU': 24.0, 'object_store_memory': 6558572544.0, 'node:127.0.0.1': 1.0, 'memory': 13117145088.0, 'GPU': 1.0}
+2025-04-07 20:19:15 - INFO - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+2025-04-07 20:19:15 - INFO - No `client_resources` specified. Using minimal resources for clients.
+2025-04-07 20:19:15 - INFO - Flower VCE: Resources for each Virtual Client: {'num_cpus': 1, 'num_gpus': 0.0}
+2025-04-07 20:19:15 - INFO - Flower VCE: Creating VirtualClientEngineActorPool with 24 actors
+2025-04-07 20:19:15 - INFO - [INIT]
+2025-04-07 20:19:15 - INFO - Requesting initial parameters from one random client
+2025-04-07 20:19:20 - INFO - Received initial parameters from one random client
+2025-04-07 20:19:20 - INFO - Starting evaluation of initial global parameters
+2025-04-07 20:19:20 - INFO - Evaluation returned no results (`None`)
+2025-04-07 20:19:20 - INFO - 
+2025-04-07 20:19:20 - INFO - [ROUND 1]
+2025-04-07 20:19:20 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:19:35 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:19:35 - WARNING - No fit_metrics_aggregation_fn provided
+2025-04-07 20:19:35 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:19:38 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:19:38 - WARNING - No evaluate_metrics_aggregation_fn provided
+2025-04-07 20:19:38 - INFO - 
+2025-04-07 20:19:38 - INFO - [ROUND 2]
+2025-04-07 20:19:38 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:19:50 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:19:50 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:19:53 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:19:53 - INFO - 
+2025-04-07 20:19:53 - INFO - [ROUND 3]
+2025-04-07 20:19:53 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:20:05 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:20:05 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:20:08 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:20:08 - INFO - 
+2025-04-07 20:20:08 - INFO - [ROUND 4]
+2025-04-07 20:20:08 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:20:20 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:20:20 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:20:23 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:20:23 - INFO - 
+2025-04-07 20:20:23 - INFO - [ROUND 5]
+2025-04-07 20:20:23 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:20:35 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:20:35 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:20:38 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:20:38 - INFO - 
+2025-04-07 20:20:38 - INFO - [ROUND 6]
+2025-04-07 20:20:38 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:20:50 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:20:50 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:20:53 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:20:53 - INFO - 
+2025-04-07 20:20:53 - INFO - [ROUND 7]
+2025-04-07 20:20:53 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:21:05 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:21:05 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:21:08 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:21:08 - INFO - 
+2025-04-07 20:21:08 - INFO - [ROUND 8]
+2025-04-07 20:21:08 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:21:20 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:21:20 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:21:23 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:21:23 - INFO - 
+2025-04-07 20:21:23 - INFO - [ROUND 9]
+2025-04-07 20:21:23 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-07 20:21:36 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-07 20:21:36 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-07 20:21:39 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-07 20:21:39 - INFO - 
+2025-04-07 20:21:39 - INFO - [ROUND 10]
+2025-04-07 20:21:39 - INFO - configure_fit: strategy sampled 20 clients (out of 20)

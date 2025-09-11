@@ -1,0 +1,849 @@
+2025-05-06 21:51:33 - INFO - Starting Federated Learning Simulation: dataset type: iid, dataset name: mnist, strategy: FedAvg(accept_failures=True), rounds: 50, clients: 20
+2025-05-06 21:51:33 - WARNING - DEPRECATED FEATURE: flwr.simulation.start_simulation() is deprecated.
+	Instead, use the `flwr run` CLI command to start a local simulation in your Flower app, as shown for example below:
+
+		$ flwr new  # Create a new Flower app from a template
+
+		$ flwr run  # Run the Flower app in Simulation Mode
+
+	Using `start_simulation()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2025-05-06 21:51:33 - INFO - Starting Flower simulation, config: num_rounds=50, no round_timeout
+2025-05-06 21:51:36 - INFO - Flower VCE: Ray initialized with resources: {'accelerator_type:G': 1.0, 'node:__internal_head__': 1.0, 'CPU': 24.0, 'object_store_memory': 5964694732.0, 'node:127.0.0.1': 1.0, 'memory': 11929389467.0, 'GPU': 1.0}
+2025-05-06 21:51:36 - INFO - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+2025-05-06 21:51:36 - INFO - No `client_resources` specified. Using minimal resources for clients.
+2025-05-06 21:51:36 - INFO - Flower VCE: Resources for each Virtual Client: {'num_cpus': 1, 'num_gpus': 0.0}
+2025-05-06 21:51:36 - INFO - Flower VCE: Creating VirtualClientEngineActorPool with 24 actors
+2025-05-06 21:51:36 - INFO - [INIT]
+2025-05-06 21:51:36 - INFO - Requesting initial parameters from one random client
+2025-05-06 21:51:39 - INFO - Received initial parameters from one random client
+2025-05-06 21:51:39 - INFO - Starting evaluation of initial global parameters
+2025-05-06 21:51:42 - INFO - initial parameters (loss, other metrics): 0.07382761383056641, {'central_global_loss': 0.07382761383056641, 'central_global_accuracy': 0.098, 'central_clean_loss': 0.07206743800640106, 'central_clean_accuracy': 0.1215, 'central_malicious_loss': 0.07206743800640106, 'central_malicious_accuracy': 0.1215}
+2025-05-06 21:51:42 - INFO - 
+2025-05-06 21:51:42 - INFO - [ROUND 1]
+2025-05-06 21:51:42 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:51:50 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:51:50 - WARNING - No fit_metrics_aggregation_fn provided
+2025-05-06 21:51:53 - INFO - fit progress: (1, 0.01003777015209198, {'central_global_loss': 0.01003777015209198, 'central_global_accuracy': 0.912, 'central_clean_loss': 0.009623030105605722, 'central_clean_accuracy': 0.916, 'central_malicious_loss': 0.009623030105605722, 'central_malicious_accuracy': 0.916}, 10.9246331)
+2025-05-06 21:51:53 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:51:54 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:51:54 - INFO - 
+2025-05-06 21:51:54 - INFO - [ROUND 2]
+2025-05-06 21:51:54 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:51:58 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:52:01 - INFO - fit progress: (2, 0.004593856379389763, {'central_global_loss': 0.004593856379389763, 'central_global_accuracy': 0.954, 'central_clean_loss': 0.004535231618653051, 'central_clean_accuracy': 0.9555, 'central_malicious_loss': 0.004535231618653051, 'central_malicious_accuracy': 0.9555}, 18.126073400000003)
+2025-05-06 21:52:01 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:01 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:52:01 - INFO - 
+2025-05-06 21:52:01 - INFO - [ROUND 3]
+2025-05-06 21:52:01 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:05 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:52:08 - INFO - fit progress: (3, 0.0031314336732029915, {'central_global_loss': 0.0031314336732029915, 'central_global_accuracy': 0.964, 'central_clean_loss': 0.003282934548170306, 'central_clean_accuracy': 0.9658, 'central_malicious_loss': 0.003282934548170306, 'central_malicious_accuracy': 0.9658}, 25.3950921)
+2025-05-06 21:52:08 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:08 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:52:08 - INFO - 
+2025-05-06 21:52:08 - INFO - [ROUND 4]
+2025-05-06 21:52:08 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:12 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:52:15 - INFO - fit progress: (4, 0.0023100719340145588, {'central_global_loss': 0.0023100719340145588, 'central_global_accuracy': 0.978, 'central_clean_loss': 0.002626995502685895, 'central_clean_accuracy': 0.9725, 'central_malicious_loss': 0.002626995502685895, 'central_malicious_accuracy': 0.9725}, 32.5882511)
+2025-05-06 21:52:15 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:15 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:52:15 - INFO - 
+2025-05-06 21:52:15 - INFO - [ROUND 5]
+2025-05-06 21:52:15 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:19 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:52:22 - INFO - fit progress: (5, 0.0018199738599359988, {'central_global_loss': 0.0018199738599359988, 'central_global_accuracy': 0.984, 'central_clean_loss': 0.002228205276108929, 'central_clean_accuracy': 0.977, 'central_malicious_loss': 0.002228205276108929, 'central_malicious_accuracy': 0.977}, 39.732996)
+2025-05-06 21:52:22 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:23 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:52:23 - INFO - 
+2025-05-06 21:52:23 - INFO - [ROUND 6]
+2025-05-06 21:52:23 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:26 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:52:29 - INFO - fit progress: (6, 0.0015154148563742637, {'central_global_loss': 0.0015154148563742637, 'central_global_accuracy': 0.986, 'central_clean_loss': 0.001957709988861461, 'central_clean_accuracy': 0.9796, 'central_malicious_loss': 0.001957709988861461, 'central_malicious_accuracy': 0.9796}, 46.9324649)
+2025-05-06 21:52:29 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:30 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:52:30 - INFO - 
+2025-05-06 21:52:30 - INFO - [ROUND 7]
+2025-05-06 21:52:30 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:34 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:52:37 - INFO - fit progress: (7, 0.0013004138628020883, {'central_global_loss': 0.0013004138628020883, 'central_global_accuracy': 0.99, 'central_clean_loss': 0.0017532478332926984, 'central_clean_accuracy': 0.982, 'central_malicious_loss': 0.0017532478332926984, 'central_malicious_accuracy': 0.982}, 54.1331837)
+2025-05-06 21:52:37 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:37 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:52:37 - INFO - 
+2025-05-06 21:52:37 - INFO - [ROUND 8]
+2025-05-06 21:52:37 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:41 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:52:44 - INFO - fit progress: (8, 0.001177021118812263, {'central_global_loss': 0.001177021118812263, 'central_global_accuracy': 0.988, 'central_clean_loss': 0.0015984616028450545, 'central_clean_accuracy': 0.9829, 'central_malicious_loss': 0.0015984616028450545, 'central_malicious_accuracy': 0.9829}, 61.3282745)
+2025-05-06 21:52:44 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:44 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:52:44 - INFO - 
+2025-05-06 21:52:44 - INFO - [ROUND 9]
+2025-05-06 21:52:44 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:48 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:52:51 - INFO - fit progress: (9, 0.0010651850150898098, {'central_global_loss': 0.0010651850150898098, 'central_global_accuracy': 0.992, 'central_clean_loss': 0.0014739318440268106, 'central_clean_accuracy': 0.9847, 'central_malicious_loss': 0.0014739318440268106, 'central_malicious_accuracy': 0.9847}, 68.61050010000001)
+2025-05-06 21:52:51 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:51 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:52:51 - INFO - 
+2025-05-06 21:52:51 - INFO - [ROUND 10]
+2025-05-06 21:52:51 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:55 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:52:58 - INFO - fit progress: (10, 0.0009955677511170507, {'central_global_loss': 0.0009955677511170507, 'central_global_accuracy': 0.992, 'central_clean_loss': 0.0013738872457557591, 'central_clean_accuracy': 0.9851, 'central_malicious_loss': 0.0013738872457557591, 'central_malicious_accuracy': 0.9851}, 75.99116550000001)
+2025-05-06 21:52:58 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:52:59 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:52:59 - INFO - 
+2025-05-06 21:52:59 - INFO - [ROUND 11]
+2025-05-06 21:52:59 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:53:03 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:53:07 - INFO - fit progress: (11, 0.0009320875839330256, {'central_global_loss': 0.0009320875839330256, 'central_global_accuracy': 0.992, 'central_clean_loss': 0.0013002430775828544, 'central_clean_accuracy': 0.9856, 'central_malicious_loss': 0.0013002430775828544, 'central_malicious_accuracy': 0.9856}, 84.13454540000001)
+2025-05-06 21:53:07 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:53:07 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:53:07 - INFO - 
+2025-05-06 21:53:07 - INFO - [ROUND 12]
+2025-05-06 21:53:07 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:53:11 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:53:15 - INFO - fit progress: (12, 0.0008763239388354122, {'central_global_loss': 0.0008763239388354122, 'central_global_accuracy': 0.992, 'central_clean_loss': 0.0012355844030622393, 'central_clean_accuracy': 0.9862, 'central_malicious_loss': 0.0012355844030622393, 'central_malicious_accuracy': 0.9862}, 92.439626)
+2025-05-06 21:53:15 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:53:15 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:53:15 - INFO - 
+2025-05-06 21:53:15 - INFO - [ROUND 13]
+2025-05-06 21:53:15 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:53:19 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:53:23 - INFO - fit progress: (13, 0.00083023038553074, {'central_global_loss': 0.00083023038553074, 'central_global_accuracy': 0.992, 'central_clean_loss': 0.001175867255137564, 'central_clean_accuracy': 0.987, 'central_malicious_loss': 0.001175867255137564, 'central_malicious_accuracy': 0.987}, 100.5652654)
+2025-05-06 21:53:23 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:53:23 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:53:23 - INFO - 
+2025-05-06 21:53:23 - INFO - [ROUND 14]
+2025-05-06 21:53:23 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:53:27 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:53:31 - INFO - fit progress: (14, 0.0007851959485560655, {'central_global_loss': 0.0007851959485560655, 'central_global_accuracy': 0.992, 'central_clean_loss': 0.0011223076040387241, 'central_clean_accuracy': 0.9872, 'central_malicious_loss': 0.0011223076040387241, 'central_malicious_accuracy': 0.9872}, 108.7701219)
+2025-05-06 21:53:31 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:53:32 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:53:32 - INFO - 
+2025-05-06 21:53:32 - INFO - [ROUND 15]
+2025-05-06 21:53:32 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:53:36 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:53:39 - INFO - fit progress: (15, 0.0007603506911545992, {'central_global_loss': 0.0007603506911545992, 'central_global_accuracy': 0.992, 'central_clean_loss': 0.0010807987877480627, 'central_clean_accuracy': 0.9875, 'central_malicious_loss': 0.0010807987877480627, 'central_malicious_accuracy': 0.9875}, 116.98295240000002)
+2025-05-06 21:53:39 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:53:40 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:53:40 - INFO - 
+2025-05-06 21:53:40 - INFO - [ROUND 16]
+2025-05-06 21:53:40 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:53:44 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:53:48 - INFO - fit progress: (16, 0.0007193344617262482, {'central_global_loss': 0.0007193344617262482, 'central_global_accuracy': 0.992, 'central_clean_loss': 0.0010420132451485187, 'central_clean_accuracy': 0.988, 'central_malicious_loss': 0.0010420132451485187, 'central_malicious_accuracy': 0.988}, 125.30202790000001)
+2025-05-06 21:53:48 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:53:48 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:53:48 - INFO - 
+2025-05-06 21:53:48 - INFO - [ROUND 17]
+2025-05-06 21:53:48 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:53:52 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:53:55 - INFO - fit progress: (17, 0.0006938653497491032, {'central_global_loss': 0.0006938653497491032, 'central_global_accuracy': 0.992, 'central_clean_loss': 0.001007264325487631, 'central_clean_accuracy': 0.9884, 'central_malicious_loss': 0.001007264325487631, 'central_malicious_accuracy': 0.9884}, 132.71392840000001)
+2025-05-06 21:53:55 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:53:56 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:53:56 - INFO - 
+2025-05-06 21:53:56 - INFO - [ROUND 18]
+2025-05-06 21:53:56 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:54:00 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:54:03 - INFO - fit progress: (18, 0.0006687436373904348, {'central_global_loss': 0.0006687436373904348, 'central_global_accuracy': 0.992, 'central_clean_loss': 0.000979392017664759, 'central_clean_accuracy': 0.9891, 'central_malicious_loss': 0.000979392017664759, 'central_malicious_accuracy': 0.9891}, 140.08511430000001)
+2025-05-06 21:54:03 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:54:03 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:54:03 - INFO - 
+2025-05-06 21:54:03 - INFO - [ROUND 19]
+2025-05-06 21:54:03 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:54:07 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:54:10 - INFO - fit progress: (19, 0.0006493077646009624, {'central_global_loss': 0.0006493077646009624, 'central_global_accuracy': 0.99, 'central_clean_loss': 0.0009552941171608836, 'central_clean_accuracy': 0.9892, 'central_malicious_loss': 0.0009552941171608836, 'central_malicious_accuracy': 0.9892}, 147.7384869)
+2025-05-06 21:54:10 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:54:11 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:54:11 - INFO - 
+2025-05-06 21:54:11 - INFO - [ROUND 20]
+2025-05-06 21:54:11 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:54:15 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:54:18 - INFO - fit progress: (20, 0.0006144821224734187, {'central_global_loss': 0.0006144821224734187, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0009328380235536316, 'central_clean_accuracy': 0.9897, 'central_malicious_loss': 0.0009328380235536316, 'central_malicious_accuracy': 0.9897}, 155.96141210000002)
+2025-05-06 21:54:18 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:54:19 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:54:19 - INFO - 
+2025-05-06 21:54:19 - INFO - [ROUND 21]
+2025-05-06 21:54:19 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:54:23 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:54:27 - INFO - fit progress: (21, 0.000601302388124168, {'central_global_loss': 0.000601302388124168, 'central_global_accuracy': 0.994, 'central_clean_loss': 0.0009124304643818505, 'central_clean_accuracy': 0.9903, 'central_malicious_loss': 0.0009124304643818505, 'central_malicious_accuracy': 0.9903}, 164.2277694)
+2025-05-06 21:54:27 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:54:27 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:54:27 - INFO - 
+2025-05-06 21:54:27 - INFO - [ROUND 22]
+2025-05-06 21:54:27 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:54:31 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:54:35 - INFO - fit progress: (22, 0.0005743965557776391, {'central_global_loss': 0.0005743965557776391, 'central_global_accuracy': 0.994, 'central_clean_loss': 0.0008934071306721307, 'central_clean_accuracy': 0.9902, 'central_malicious_loss': 0.0008934071306721307, 'central_malicious_accuracy': 0.9902}, 172.5170744)
+2025-05-06 21:54:35 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:54:35 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:54:35 - INFO - 
+2025-05-06 21:54:35 - INFO - [ROUND 23]
+2025-05-06 21:54:35 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:54:39 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:54:43 - INFO - fit progress: (23, 0.0005525598097592592, {'central_global_loss': 0.0005525598097592592, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0008781951802109688, 'central_clean_accuracy': 0.9903, 'central_malicious_loss': 0.0008781951802109688, 'central_malicious_accuracy': 0.9903}, 180.7438617)
+2025-05-06 21:54:43 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:54:44 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:54:44 - INFO - 
+2025-05-06 21:54:44 - INFO - [ROUND 24]
+2025-05-06 21:54:44 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:54:48 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:54:51 - INFO - fit progress: (24, 0.0005331173326121643, {'central_global_loss': 0.0005331173326121643, 'central_global_accuracy': 0.994, 'central_clean_loss': 0.0008646981103698635, 'central_clean_accuracy': 0.9904, 'central_malicious_loss': 0.0008646981103698635, 'central_malicious_accuracy': 0.9904}, 188.9576197)
+2025-05-06 21:54:51 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:54:52 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:54:52 - INFO - 
+2025-05-06 21:54:52 - INFO - [ROUND 25]
+2025-05-06 21:54:52 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:54:56 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:55:00 - INFO - fit progress: (25, 0.0005143636184511706, {'central_global_loss': 0.0005143636184511706, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0008521878223292333, 'central_clean_accuracy': 0.9906, 'central_malicious_loss': 0.0008521878223292333, 'central_malicious_accuracy': 0.9906}, 197.1103347)
+2025-05-06 21:55:00 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:00 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:55:00 - INFO - 
+2025-05-06 21:55:00 - INFO - [ROUND 26]
+2025-05-06 21:55:00 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:04 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:55:08 - INFO - fit progress: (26, 0.0004885599194094539, {'central_global_loss': 0.0004885599194094539, 'central_global_accuracy': 0.994, 'central_clean_loss': 0.0008373531038182591, 'central_clean_accuracy': 0.9909, 'central_malicious_loss': 0.0008373531038182591, 'central_malicious_accuracy': 0.9909}, 205.4995453)
+2025-05-06 21:55:08 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:08 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:55:08 - INFO - 
+2025-05-06 21:55:08 - INFO - [ROUND 27]
+2025-05-06 21:55:08 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:13 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:55:16 - INFO - fit progress: (27, 0.0004763132233638316, {'central_global_loss': 0.0004763132233638316, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.000828054564887907, 'central_clean_accuracy': 0.9911, 'central_malicious_loss': 0.000828054564887907, 'central_malicious_accuracy': 0.9911}, 213.4241472)
+2025-05-06 21:55:16 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:16 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:55:16 - INFO - 
+2025-05-06 21:55:16 - INFO - [ROUND 28]
+2025-05-06 21:55:16 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:21 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:55:24 - INFO - fit progress: (28, 0.0004677743276115507, {'central_global_loss': 0.0004677743276115507, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0008213189421800053, 'central_clean_accuracy': 0.9911, 'central_malicious_loss': 0.0008213189421800053, 'central_malicious_accuracy': 0.9911}, 221.59941460000002)
+2025-05-06 21:55:24 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:24 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:55:24 - INFO - 
+2025-05-06 21:55:24 - INFO - [ROUND 29]
+2025-05-06 21:55:24 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:29 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:55:32 - INFO - fit progress: (29, 0.00045002477033995094, {'central_global_loss': 0.00045002477033995094, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.000810455755071962, 'central_clean_accuracy': 0.9913, 'central_malicious_loss': 0.000810455755071962, 'central_malicious_accuracy': 0.9913}, 229.4502396)
+2025-05-06 21:55:32 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:32 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:55:32 - INFO - 
+2025-05-06 21:55:32 - INFO - [ROUND 30]
+2025-05-06 21:55:32 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:36 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:55:39 - INFO - fit progress: (30, 0.0004347175743896514, {'central_global_loss': 0.0004347175743896514, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0008026213386255222, 'central_clean_accuracy': 0.9915, 'central_malicious_loss': 0.0008026213386255222, 'central_malicious_accuracy': 0.9915}, 236.8666125)
+2025-05-06 21:55:39 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:40 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:55:40 - INFO - 
+2025-05-06 21:55:40 - INFO - [ROUND 31]
+2025-05-06 21:55:40 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:44 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:55:47 - INFO - fit progress: (31, 0.0004204824558692053, {'central_global_loss': 0.0004204824558692053, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0007966724432785213, 'central_clean_accuracy': 0.9916, 'central_malicious_loss': 0.0007966724432785213, 'central_malicious_accuracy': 0.9916}, 244.0615856)
+2025-05-06 21:55:47 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:47 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:55:47 - INFO - 
+2025-05-06 21:55:47 - INFO - [ROUND 32]
+2025-05-06 21:55:47 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:51 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:55:55 - INFO - fit progress: (32, 0.000412305515492335, {'central_global_loss': 0.000412305515492335, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0007963146517225596, 'central_clean_accuracy': 0.992, 'central_malicious_loss': 0.0007963146517225596, 'central_malicious_accuracy': 0.992}, 252.2476748)
+2025-05-06 21:55:55 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:55 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:55:55 - INFO - 
+2025-05-06 21:55:55 - INFO - [ROUND 33]
+2025-05-06 21:55:55 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:55:59 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:56:03 - INFO - fit progress: (33, 0.00039459748147055505, {'central_global_loss': 0.00039459748147055505, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0007839060637101057, 'central_clean_accuracy': 0.9921, 'central_malicious_loss': 0.0007839060637101057, 'central_malicious_accuracy': 0.9921}, 260.640047)
+2025-05-06 21:56:03 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:56:04 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:56:04 - INFO - 
+2025-05-06 21:56:04 - INFO - [ROUND 34]
+2025-05-06 21:56:04 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:56:08 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:56:11 - INFO - fit progress: (34, 0.00038882946025114507, {'central_global_loss': 0.00038882946025114507, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0007832404328471512, 'central_clean_accuracy': 0.9921, 'central_malicious_loss': 0.0007832404328471512, 'central_malicious_accuracy': 0.9921}, 268.9497801)
+2025-05-06 21:56:11 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:56:12 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:56:12 - INFO - 
+2025-05-06 21:56:12 - INFO - [ROUND 35]
+2025-05-06 21:56:12 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:56:16 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:56:20 - INFO - fit progress: (35, 0.0003785418689949438, {'central_global_loss': 0.0003785418689949438, 'central_global_accuracy': 0.998, 'central_clean_loss': 0.0007719184760179815, 'central_clean_accuracy': 0.9925, 'central_malicious_loss': 0.0007719184760179815, 'central_malicious_accuracy': 0.9925}, 277.27673419999996)
+2025-05-06 21:56:20 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:56:20 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:56:20 - INFO - 
+2025-05-06 21:56:20 - INFO - [ROUND 36]
+2025-05-06 21:56:20 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:56:24 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:56:28 - INFO - fit progress: (36, 0.000367617612471804, {'central_global_loss': 0.000367617612471804, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.000768934646638013, 'central_clean_accuracy': 0.9924, 'central_malicious_loss': 0.000768934646638013, 'central_malicious_accuracy': 0.9924}, 285.6244908)
+2025-05-06 21:56:28 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:56:29 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:56:29 - INFO - 
+2025-05-06 21:56:29 - INFO - [ROUND 37]
+2025-05-06 21:56:29 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:56:33 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:56:36 - INFO - fit progress: (37, 0.00036806185531895605, {'central_global_loss': 0.00036806185531895605, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0007650752208039194, 'central_clean_accuracy': 0.9923, 'central_malicious_loss': 0.0007650752208039194, 'central_malicious_accuracy': 0.9923}, 293.97765919999995)
+2025-05-06 21:56:36 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:56:37 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:56:37 - INFO - 
+2025-05-06 21:56:37 - INFO - [ROUND 38]
+2025-05-06 21:56:37 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:56:41 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:56:45 - INFO - fit progress: (38, 0.0003672660998417996, {'central_global_loss': 0.0003672660998417996, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0007596598423136584, 'central_clean_accuracy': 0.9923, 'central_malicious_loss': 0.0007596598423136584, 'central_malicious_accuracy': 0.9923}, 302.4981337)
+2025-05-06 21:56:45 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:56:45 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:56:45 - INFO - 
+2025-05-06 21:56:45 - INFO - [ROUND 39]
+2025-05-06 21:56:45 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:56:49 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:56:53 - INFO - fit progress: (39, 0.00035479474486783144, {'central_global_loss': 0.00035479474486783144, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0007554923986387848, 'central_clean_accuracy': 0.9926, 'central_malicious_loss': 0.0007554923986387848, 'central_malicious_accuracy': 0.9926}, 310.81231859999997)
+2025-05-06 21:56:53 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:56:54 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:56:54 - INFO - 
+2025-05-06 21:56:54 - INFO - [ROUND 40]
+2025-05-06 21:56:54 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:56:58 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:57:02 - INFO - fit progress: (40, 0.00035239851457299665, {'central_global_loss': 0.00035239851457299665, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0007552938413143693, 'central_clean_accuracy': 0.9927, 'central_malicious_loss': 0.0007552938413143693, 'central_malicious_accuracy': 0.9927}, 319.19450209999997)
+2025-05-06 21:57:02 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:57:02 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:57:02 - INFO - 
+2025-05-06 21:57:02 - INFO - [ROUND 41]
+2025-05-06 21:57:02 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:57:06 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:57:10 - INFO - fit progress: (41, 0.0003421353283338249, {'central_global_loss': 0.0003421353283338249, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0007500496657253734, 'central_clean_accuracy': 0.9928, 'central_malicious_loss': 0.0007500496657253734, 'central_malicious_accuracy': 0.9928}, 327.54886539999995)
+2025-05-06 21:57:10 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:57:10 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:57:10 - INFO - 
+2025-05-06 21:57:10 - INFO - [ROUND 42]
+2025-05-06 21:57:10 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:57:14 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:57:18 - INFO - fit progress: (42, 0.0003393818404292688, {'central_global_loss': 0.0003393818404292688, 'central_global_accuracy': 0.994, 'central_clean_loss': 0.0007532224240799679, 'central_clean_accuracy': 0.9927, 'central_malicious_loss': 0.0007532224240799679, 'central_malicious_accuracy': 0.9927}, 335.93198379999995)
+2025-05-06 21:57:18 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:57:19 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:57:19 - INFO - 
+2025-05-06 21:57:19 - INFO - [ROUND 43]
+2025-05-06 21:57:19 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:57:23 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:57:27 - INFO - fit progress: (43, 0.0003366213730187155, {'central_global_loss': 0.0003366213730187155, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.000754503287923103, 'central_clean_accuracy': 0.9928, 'central_malicious_loss': 0.000754503287923103, 'central_malicious_accuracy': 0.9928}, 344.2404254)
+2025-05-06 21:57:27 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:57:27 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:57:27 - INFO - 
+2025-05-06 21:57:27 - INFO - [ROUND 44]
+2025-05-06 21:57:27 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:57:31 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:57:35 - INFO - fit progress: (44, 0.00033749675884610044, {'central_global_loss': 0.00033749675884610044, 'central_global_accuracy': 0.994, 'central_clean_loss': 0.0007521957480847732, 'central_clean_accuracy': 0.9928, 'central_malicious_loss': 0.0007521957480847732, 'central_malicious_accuracy': 0.9928}, 352.5923315)
+2025-05-06 21:57:35 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:57:35 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:57:35 - INFO - 
+2025-05-06 21:57:35 - INFO - [ROUND 45]
+2025-05-06 21:57:35 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:57:39 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:57:43 - INFO - fit progress: (45, 0.00033081323298392816, {'central_global_loss': 0.00033081323298392816, 'central_global_accuracy': 0.994, 'central_clean_loss': 0.0007518561129560339, 'central_clean_accuracy': 0.9929, 'central_malicious_loss': 0.0007518561129560339, 'central_malicious_accuracy': 0.9929}, 360.74260419999996)
+2025-05-06 21:57:43 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:57:44 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:57:44 - INFO - 
+2025-05-06 21:57:44 - INFO - [ROUND 46]
+2025-05-06 21:57:44 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:57:48 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:57:51 - INFO - fit progress: (46, 0.0003351647491217591, {'central_global_loss': 0.0003351647491217591, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0007501763912404272, 'central_clean_accuracy': 0.993, 'central_malicious_loss': 0.0007501763912404272, 'central_malicious_accuracy': 0.993}, 368.9058521)
+2025-05-06 21:57:51 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:57:52 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:57:52 - INFO - 
+2025-05-06 21:57:52 - INFO - [ROUND 47]
+2025-05-06 21:57:52 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:57:56 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:58:00 - INFO - fit progress: (47, 0.00034796853869920594, {'central_global_loss': 0.00034796853869920594, 'central_global_accuracy': 0.996, 'central_clean_loss': 0.0007486559575318324, 'central_clean_accuracy': 0.993, 'central_malicious_loss': 0.0007486559575318324, 'central_malicious_accuracy': 0.993}, 377.0521361)
+2025-05-06 21:58:00 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:58:00 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:58:00 - INFO - 
+2025-05-06 21:58:00 - INFO - [ROUND 48]
+2025-05-06 21:58:00 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:58:04 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:58:07 - INFO - fit progress: (48, 0.0003432155729678925, {'central_global_loss': 0.0003432155729678925, 'central_global_accuracy': 0.994, 'central_clean_loss': 0.0007462057783635828, 'central_clean_accuracy': 0.9929, 'central_malicious_loss': 0.0007462057783635828, 'central_malicious_accuracy': 0.9929}, 384.78410779999996)
+2025-05-06 21:58:07 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:58:08 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:58:08 - INFO - 
+2025-05-06 21:58:08 - INFO - [ROUND 49]
+2025-05-06 21:58:08 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:58:12 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:58:15 - INFO - fit progress: (49, 0.000352414638036862, {'central_global_loss': 0.000352414638036862, 'central_global_accuracy': 0.994, 'central_clean_loss': 0.0007435671640440944, 'central_clean_accuracy': 0.9928, 'central_malicious_loss': 0.0007435671640440944, 'central_malicious_accuracy': 0.9928}, 392.21175239999997)
+2025-05-06 21:58:15 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:58:15 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:58:15 - INFO - 
+2025-05-06 21:58:15 - INFO - [ROUND 50]
+2025-05-06 21:58:15 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:58:19 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:58:22 - INFO - fit progress: (50, 0.0003342595514259301, {'central_global_loss': 0.0003342595514259301, 'central_global_accuracy': 0.994, 'central_clean_loss': 0.0007417208755869865, 'central_clean_accuracy': 0.9927, 'central_malicious_loss': 0.0007417208755869865, 'central_malicious_accuracy': 0.9927}, 399.3413888)
+2025-05-06 21:58:22 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:58:22 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:58:22 - INFO - 
+2025-05-06 21:58:22 - INFO - [SUMMARY]
+2025-05-06 21:58:22 - INFO - Run finished 50 round(s) in 399.76s
+2025-05-06 21:58:22 - INFO - 	History (loss, distributed):
+2025-05-06 21:58:22 - INFO - 		round 1: 0.9147272727272727
+2025-05-06 21:58:22 - INFO - 		round 2: 0.938
+2025-05-06 21:58:22 - INFO - 	History (loss, centralized):
+2025-05-06 21:58:22 - INFO - 		round 0: 0.07382761383056641
+2025-05-06 21:58:22 - INFO - 		round 1: 0.01003777015209198
+2025-05-06 21:58:22 - INFO - 		round 2: 0.004593856379389763
+2025-05-06 21:58:22 - INFO - 		round 3: 0.0031314336732029915
+2025-05-06 21:58:22 - INFO - 		round 4: 0.0023100719340145588
+2025-05-06 21:58:22 - INFO - 		round 5: 0.0018199738599359988
+2025-05-06 21:58:22 - INFO - 		round 6: 0.0015154148563742637
+2025-05-06 21:58:22 - INFO - 		round 7: 0.0013004138628020883
+2025-05-06 21:58:22 - INFO - 		round 8: 0.001177021118812263
+2025-05-06 21:58:22 - INFO - 		round 9: 0.0010651850150898098
+2025-05-06 21:58:22 - INFO - 		round 10: 0.0009955677511170507
+2025-05-06 21:58:22 - INFO - 		round 11: 0.0009320875839330256
+2025-05-06 21:58:22 - INFO - 		round 12: 0.0008763239388354122
+2025-05-06 21:58:22 - INFO - 		round 13: 0.00083023038553074
+2025-05-06 21:58:22 - INFO - 		round 14: 0.0007851959485560655
+2025-05-06 21:58:22 - INFO - 		round 15: 0.0007603506911545992
+2025-05-06 21:58:22 - INFO - 		round 16: 0.0007193344617262482
+2025-05-06 21:58:22 - INFO - 		round 17: 0.0006938653497491032
+2025-05-06 21:58:22 - INFO - 		round 18: 0.0006687436373904348
+2025-05-06 21:58:22 - INFO - 		round 19: 0.0006493077646009624
+2025-05-06 21:58:22 - INFO - 		round 20: 0.0006144821224734187
+2025-05-06 21:58:22 - INFO - 		round 21: 0.000601302388124168
+2025-05-06 21:58:22 - INFO - 		round 22: 0.0005743965557776391
+2025-05-06 21:58:22 - INFO - 		round 23: 0.0005525598097592592
+2025-05-06 21:58:22 - INFO - 		round 24: 0.0005331173326121643
+2025-05-06 21:58:22 - INFO - 		round 25: 0.0005143636184511706
+2025-05-06 21:58:22 - INFO - 		round 26: 0.0004885599194094539
+2025-05-06 21:58:22 - INFO - 		round 27: 0.0004763132233638316
+2025-05-06 21:58:22 - INFO - 		round 28: 0.0004677743276115507
+2025-05-06 21:58:22 - INFO - 		round 29: 0.00045002477033995094
+2025-05-06 21:58:22 - INFO - 		round 30: 0.0004347175743896514
+2025-05-06 21:58:22 - INFO - 		round 31: 0.0004204824558692053
+2025-05-06 21:58:22 - INFO - 		round 32: 0.000412305515492335
+2025-05-06 21:58:22 - INFO - 		round 33: 0.00039459748147055505
+2025-05-06 21:58:22 - INFO - 		round 34: 0.00038882946025114507
+2025-05-06 21:58:22 - INFO - 		round 35: 0.0003785418689949438
+2025-05-06 21:58:22 - INFO - 		round 36: 0.000367617612471804
+2025-05-06 21:58:22 - INFO - 		round 37: 0.00036806185531895605
+2025-05-06 21:58:22 - INFO - 		round 38: 0.0003672660998417996
+2025-05-06 21:58:22 - INFO - 		round 39: 0.00035479474486783144
+2025-05-06 21:58:22 - INFO - 		round 40: 0.00035239851457299665
+2025-05-06 21:58:22 - INFO - 		round 41: 0.0003421353283338249
+2025-05-06 21:58:22 - INFO - 		round 42: 0.0003393818404292688
+2025-05-06 21:58:22 - INFO - 		round 43: 0.0003366213730187155
+2025-05-06 21:58:22 - INFO - 		round 44: 0.00033749675884610044
+2025-05-06 21:58:22 - INFO - 		round 45: 0.00033081323298392816
+2025-05-06 21:58:22 - INFO - 		round 46: 0.0003351647491217591
+2025-05-06 21:58:22 - INFO - 		round 47: 0.00034796853869920594
+2025-05-06 21:58:22 - INFO - 		round 48: 0.0003432155729678925
+2025-05-06 21:58:22 - INFO - 		round 49: 0.000352414638036862
+2025-05-06 21:58:22 - INFO - 		round 50: 0.0003342595514259301
+2025-05-06 21:58:22 - INFO - 	History (metrics, distributed, evaluate):
+2025-05-06 21:58:22 - INFO - 	{'accuracy': [(1, 0.9147272727272727), (2, 0.938)],
+2025-05-06 21:58:22 - INFO - 	 'client_accuracies': [(1,
+2025-05-06 21:58:22 - INFO - 	                        [0.984,
+2025-05-06 21:58:22 - INFO - 	                         0.878,
+2025-05-06 21:58:22 - INFO - 	                         0.898,
+2025-05-06 21:58:22 - INFO - 	                         0.952,
+2025-05-06 21:58:22 - INFO - 	                         0.89,
+2025-05-06 21:58:22 - INFO - 	                         0.89,
+2025-05-06 21:58:22 - INFO - 	                         0.882,
+2025-05-06 21:58:22 - INFO - 	                         0.92,
+2025-05-06 21:58:22 - INFO - 	                         0.964,
+2025-05-06 21:58:22 - INFO - 	                         0.916,
+2025-05-06 21:58:22 - INFO - 	                         0.888]),
+2025-05-06 21:58:22 - INFO - 	                       (2, [0.938])],
+2025-05-06 21:58:22 - INFO - 	 'client_update_norms': [(1,
+2025-05-06 21:58:22 - INFO - 	                          [0.0,
+2025-05-06 21:58:22 - INFO - 	                           0.0,
+2025-05-06 21:58:22 - INFO - 	                           0.0,
+2025-05-06 21:58:22 - INFO - 	                           0.0,
+2025-05-06 21:58:22 - INFO - 	                           0.0,
+2025-05-06 21:58:22 - INFO - 	                           0.0,
+2025-05-06 21:58:22 - INFO - 	                           0.0,
+2025-05-06 21:58:22 - INFO - 	                           0.0,
+2025-05-06 21:58:22 - INFO - 	                           0.0,
+2025-05-06 21:58:22 - INFO - 	                           0.0,
+2025-05-06 21:58:22 - INFO - 	                           0.0]),
+2025-05-06 21:58:22 - INFO - 	                         (2, [0.0])],
+2025-05-06 21:58:22 - INFO - 	 'keep_rate': [(1, 0.5), (2, 1.0)],
+2025-05-06 21:58:22 - INFO - 	 'loss': [(1, 0.3068375344472853), (2, 0.17434352566488087)]}
+2025-05-06 21:58:22 - INFO - 	History (metrics, centralized):
+2025-05-06 21:58:22 - INFO - 	{'central_clean_accuracy': [(0, 0.1215),
+2025-05-06 21:58:22 - INFO - 	                            (1, 0.916),
+2025-05-06 21:58:22 - INFO - 	                            (2, 0.9555),
+2025-05-06 21:58:22 - INFO - 	                            (3, 0.9658),
+2025-05-06 21:58:22 - INFO - 	                            (4, 0.9725),
+2025-05-06 21:58:22 - INFO - 	                            (5, 0.977),
+2025-05-06 21:58:22 - INFO - 	                            (6, 0.9796),
+2025-05-06 21:58:22 - INFO - 	                            (7, 0.982),
+2025-05-06 21:58:22 - INFO - 	                            (8, 0.9829),
+2025-05-06 21:58:22 - INFO - 	                            (9, 0.9847),
+2025-05-06 21:58:22 - INFO - 	                            (10, 0.9851),
+2025-05-06 21:58:22 - INFO - 	                            (11, 0.9856),
+2025-05-06 21:58:22 - INFO - 	                            (12, 0.9862),
+2025-05-06 21:58:22 - INFO - 	                            (13, 0.987),
+2025-05-06 21:58:22 - INFO - 	                            (14, 0.9872),
+2025-05-06 21:58:22 - INFO - 	                            (15, 0.9875),
+2025-05-06 21:58:22 - INFO - 	                            (16, 0.988),
+2025-05-06 21:58:22 - INFO - 	                            (17, 0.9884),
+2025-05-06 21:58:22 - INFO - 	                            (18, 0.9891),
+2025-05-06 21:58:22 - INFO - 	                            (19, 0.9892),
+2025-05-06 21:58:22 - INFO - 	                            (20, 0.9897),
+2025-05-06 21:58:22 - INFO - 	                            (21, 0.9903),
+2025-05-06 21:58:22 - INFO - 	                            (22, 0.9902),
+2025-05-06 21:58:22 - INFO - 	                            (23, 0.9903),
+2025-05-06 21:58:22 - INFO - 	                            (24, 0.9904),
+2025-05-06 21:58:22 - INFO - 	                            (25, 0.9906),
+2025-05-06 21:58:22 - INFO - 	                            (26, 0.9909),
+2025-05-06 21:58:22 - INFO - 	                            (27, 0.9911),
+2025-05-06 21:58:22 - INFO - 	                            (28, 0.9911),
+2025-05-06 21:58:22 - INFO - 	                            (29, 0.9913),
+2025-05-06 21:58:22 - INFO - 	                            (30, 0.9915),
+2025-05-06 21:58:22 - INFO - 	                            (31, 0.9916),
+2025-05-06 21:58:22 - INFO - 	                            (32, 0.992),
+2025-05-06 21:58:22 - INFO - 	                            (33, 0.9921),
+2025-05-06 21:58:22 - INFO - 	                            (34, 0.9921),
+2025-05-06 21:58:22 - INFO - 	                            (35, 0.9925),
+2025-05-06 21:58:22 - INFO - 	                            (36, 0.9924),
+2025-05-06 21:58:22 - INFO - 	                            (37, 0.9923),
+2025-05-06 21:58:22 - INFO - 	                            (38, 0.9923),
+2025-05-06 21:58:22 - INFO - 	                            (39, 0.9926),
+2025-05-06 21:58:22 - INFO - 	                            (40, 0.9927),
+2025-05-06 21:58:22 - INFO - 	                            (41, 0.9928),
+2025-05-06 21:58:22 - INFO - 	                            (42, 0.9927),
+2025-05-06 21:58:22 - INFO - 	                            (43, 0.9928),
+2025-05-06 21:58:22 - INFO - 	                            (44, 0.9928),
+2025-05-06 21:58:22 - INFO - 	                            (45, 0.9929),
+2025-05-06 21:58:22 - INFO - 	                            (46, 0.993),
+2025-05-06 21:58:22 - INFO - 	                            (47, 0.993),
+2025-05-06 21:58:22 - INFO - 	                            (48, 0.9929),
+2025-05-06 21:58:22 - INFO - 	                            (49, 0.9928),
+2025-05-06 21:58:22 - INFO - 	                            (50, 0.9927)],
+2025-05-06 21:58:22 - INFO - 	 'central_clean_loss': [(0, 0.07206743800640106),
+2025-05-06 21:58:22 - INFO - 	                        (1, 0.009623030105605722),
+2025-05-06 21:58:22 - INFO - 	                        (2, 0.004535231618653051),
+2025-05-06 21:58:22 - INFO - 	                        (3, 0.003282934548170306),
+2025-05-06 21:58:22 - INFO - 	                        (4, 0.002626995502685895),
+2025-05-06 21:58:22 - INFO - 	                        (5, 0.002228205276108929),
+2025-05-06 21:58:22 - INFO - 	                        (6, 0.001957709988861461),
+2025-05-06 21:58:22 - INFO - 	                        (7, 0.0017532478332926984),
+2025-05-06 21:58:22 - INFO - 	                        (8, 0.0015984616028450545),
+2025-05-06 21:58:22 - INFO - 	                        (9, 0.0014739318440268106),
+2025-05-06 21:58:22 - INFO - 	                        (10, 0.0013738872457557591),
+2025-05-06 21:58:22 - INFO - 	                        (11, 0.0013002430775828544),
+2025-05-06 21:58:22 - INFO - 	                        (12, 0.0012355844030622393),
+2025-05-06 21:58:22 - INFO - 	                        (13, 0.001175867255137564),
+2025-05-06 21:58:22 - INFO - 	                        (14, 0.0011223076040387241),
+2025-05-06 21:58:22 - INFO - 	                        (15, 0.0010807987877480627),
+2025-05-06 21:58:22 - INFO - 	                        (16, 0.0010420132451485187),
+2025-05-06 21:58:22 - INFO - 	                        (17, 0.001007264325487631),
+2025-05-06 21:58:22 - INFO - 	                        (18, 0.000979392017664759),
+2025-05-06 21:58:22 - INFO - 	                        (19, 0.0009552941171608836),
+2025-05-06 21:58:22 - INFO - 	                        (20, 0.0009328380235536316),
+2025-05-06 21:58:22 - INFO - 	                        (21, 0.0009124304643818505),
+2025-05-06 21:58:22 - INFO - 	                        (22, 0.0008934071306721307),
+2025-05-06 21:58:22 - INFO - 	                        (23, 0.0008781951802109688),
+2025-05-06 21:58:22 - INFO - 	                        (24, 0.0008646981103698635),
+2025-05-06 21:58:22 - INFO - 	                        (25, 0.0008521878223292333),
+2025-05-06 21:58:22 - INFO - 	                        (26, 0.0008373531038182591),
+2025-05-06 21:58:22 - INFO - 	                        (27, 0.000828054564887907),
+2025-05-06 21:58:22 - INFO - 	                        (28, 0.0008213189421800053),
+2025-05-06 21:58:22 - INFO - 	                        (29, 0.000810455755071962),
+2025-05-06 21:58:22 - INFO - 	                        (30, 0.0008026213386255222),
+2025-05-06 21:58:22 - INFO - 	                        (31, 0.0007966724432785213),
+2025-05-06 21:58:22 - INFO - 	                        (32, 0.0007963146517225596),
+2025-05-06 21:58:22 - INFO - 	                        (33, 0.0007839060637101057),
+2025-05-06 21:58:22 - INFO - 	                        (34, 0.0007832404328471512),
+2025-05-06 21:58:22 - INFO - 	                        (35, 0.0007719184760179815),
+2025-05-06 21:58:22 - INFO - 	                        (36, 0.000768934646638013),
+2025-05-06 21:58:22 - INFO - 	                        (37, 0.0007650752208039194),
+2025-05-06 21:58:22 - INFO - 	                        (38, 0.0007596598423136584),
+2025-05-06 21:58:22 - INFO - 	                        (39, 0.0007554923986387848),
+2025-05-06 21:58:22 - INFO - 	                        (40, 0.0007552938413143693),
+2025-05-06 21:58:22 - INFO - 	                        (41, 0.0007500496657253734),
+2025-05-06 21:58:22 - INFO - 	                        (42, 0.0007532224240799679),
+2025-05-06 21:58:22 - INFO - 	                        (43, 0.000754503287923103),
+2025-05-06 21:58:22 - INFO - 	                        (44, 0.0007521957480847732),
+2025-05-06 21:58:22 - INFO - 	                        (45, 0.0007518561129560339),
+2025-05-06 21:58:22 - INFO - 	                        (46, 0.0007501763912404272),
+2025-05-06 21:58:22 - INFO - 	                        (47, 0.0007486559575318324),
+2025-05-06 21:58:22 - INFO - 	                        (48, 0.0007462057783635828),
+2025-05-06 21:58:22 - INFO - 	                        (49, 0.0007435671640440944),
+2025-05-06 21:58:22 - INFO - 	                        (50, 0.0007417208755869865)],
+2025-05-06 21:58:22 - INFO - 	 'central_global_accuracy': [(0, 0.098),
+2025-05-06 21:58:22 - INFO - 	                             (1, 0.912),
+2025-05-06 21:58:22 - INFO - 	                             (2, 0.954),
+2025-05-06 21:58:22 - INFO - 	                             (3, 0.964),
+2025-05-06 21:58:22 - INFO - 	                             (4, 0.978),
+2025-05-06 21:58:22 - INFO - 	                             (5, 0.984),
+2025-05-06 21:58:22 - INFO - 	                             (6, 0.986),
+2025-05-06 21:58:22 - INFO - 	                             (7, 0.99),
+2025-05-06 21:58:22 - INFO - 	                             (8, 0.988),
+2025-05-06 21:58:22 - INFO - 	                             (9, 0.992),
+2025-05-06 21:58:22 - INFO - 	                             (10, 0.992),
+2025-05-06 21:58:22 - INFO - 	                             (11, 0.992),
+2025-05-06 21:58:22 - INFO - 	                             (12, 0.992),
+2025-05-06 21:58:22 - INFO - 	                             (13, 0.992),
+2025-05-06 21:58:22 - INFO - 	                             (14, 0.992),
+2025-05-06 21:58:22 - INFO - 	                             (15, 0.992),
+2025-05-06 21:58:22 - INFO - 	                             (16, 0.992),
+2025-05-06 21:58:22 - INFO - 	                             (17, 0.992),
+2025-05-06 21:58:22 - INFO - 	                             (18, 0.992),
+2025-05-06 21:58:22 - INFO - 	                             (19, 0.99),
+2025-05-06 21:58:22 - INFO - 	                             (20, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (21, 0.994),
+2025-05-06 21:58:22 - INFO - 	                             (22, 0.994),
+2025-05-06 21:58:22 - INFO - 	                             (23, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (24, 0.994),
+2025-05-06 21:58:22 - INFO - 	                             (25, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (26, 0.994),
+2025-05-06 21:58:22 - INFO - 	                             (27, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (28, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (29, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (30, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (31, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (32, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (33, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (34, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (35, 0.998),
+2025-05-06 21:58:22 - INFO - 	                             (36, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (37, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (38, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (39, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (40, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (41, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (42, 0.994),
+2025-05-06 21:58:22 - INFO - 	                             (43, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (44, 0.994),
+2025-05-06 21:58:22 - INFO - 	                             (45, 0.994),
+2025-05-06 21:58:22 - INFO - 	                             (46, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (47, 0.996),
+2025-05-06 21:58:22 - INFO - 	                             (48, 0.994),
+2025-05-06 21:58:22 - INFO - 	                             (49, 0.994),
+2025-05-06 21:58:22 - INFO - 	                             (50, 0.994)],
+2025-05-06 21:58:22 - INFO - 	 'central_global_loss': [(0, 0.07382761383056641),
+2025-05-06 21:58:22 - INFO - 	                         (1, 0.01003777015209198),
+2025-05-06 21:58:22 - INFO - 	                         (2, 0.004593856379389763),
+2025-05-06 21:58:22 - INFO - 	                         (3, 0.0031314336732029915),
+2025-05-06 21:58:22 - INFO - 	                         (4, 0.0023100719340145588),
+2025-05-06 21:58:22 - INFO - 	                         (5, 0.0018199738599359988),
+2025-05-06 21:58:22 - INFO - 	                         (6, 0.0015154148563742637),
+2025-05-06 21:58:22 - INFO - 	                         (7, 0.0013004138628020883),
+2025-05-06 21:58:22 - INFO - 	                         (8, 0.001177021118812263),
+2025-05-06 21:58:22 - INFO - 	                         (9, 0.0010651850150898098),
+2025-05-06 21:58:22 - INFO - 	                         (10, 0.0009955677511170507),
+2025-05-06 21:58:22 - INFO - 	                         (11, 0.0009320875839330256),
+2025-05-06 21:58:22 - INFO - 	                         (12, 0.0008763239388354122),
+2025-05-06 21:58:22 - INFO - 	                         (13, 0.00083023038553074),
+2025-05-06 21:58:22 - INFO - 	                         (14, 0.0007851959485560655),
+2025-05-06 21:58:22 - INFO - 	                         (15, 0.0007603506911545992),
+2025-05-06 21:58:22 - INFO - 	                         (16, 0.0007193344617262482),
+2025-05-06 21:58:22 - INFO - 	                         (17, 0.0006938653497491032),
+2025-05-06 21:58:22 - INFO - 	                         (18, 0.0006687436373904348),
+2025-05-06 21:58:22 - INFO - 	                         (19, 0.0006493077646009624),
+2025-05-06 21:58:22 - INFO - 	                         (20, 0.0006144821224734187),
+2025-05-06 21:58:22 - INFO - 	                         (21, 0.000601302388124168),
+2025-05-06 21:58:22 - INFO - 	                         (22, 0.0005743965557776391),
+2025-05-06 21:58:22 - INFO - 	                         (23, 0.0005525598097592592),
+2025-05-06 21:58:22 - INFO - 	                         (24, 0.0005331173326121643),
+2025-05-06 21:58:22 - INFO - 	                         (25, 0.0005143636184511706),
+2025-05-06 21:58:22 - INFO - 	                         (26, 0.0004885599194094539),
+2025-05-06 21:58:22 - INFO - 	                         (27, 0.0004763132233638316),
+2025-05-06 21:58:22 - INFO - 	                         (28, 0.0004677743276115507),
+2025-05-06 21:58:22 - INFO - 	                         (29, 0.00045002477033995094),
+2025-05-06 21:58:22 - INFO - 	                         (30, 0.0004347175743896514),
+2025-05-06 21:58:22 - INFO - 	                         (31, 0.0004204824558692053),
+2025-05-06 21:58:22 - INFO - 	                         (32, 0.000412305515492335),
+2025-05-06 21:58:22 - INFO - 	                         (33, 0.00039459748147055505),
+2025-05-06 21:58:22 - INFO - 	                         (34, 0.00038882946025114507),
+2025-05-06 21:58:22 - INFO - 	                         (35, 0.0003785418689949438),
+2025-05-06 21:58:22 - INFO - 	                         (36, 0.000367617612471804),
+2025-05-06 21:58:22 - INFO - 	                         (37, 0.00036806185531895605),
+2025-05-06 21:58:22 - INFO - 	                         (38, 0.0003672660998417996),
+2025-05-06 21:58:22 - INFO - 	                         (39, 0.00035479474486783144),
+2025-05-06 21:58:22 - INFO - 	                         (40, 0.00035239851457299665),
+2025-05-06 21:58:22 - INFO - 	                         (41, 0.0003421353283338249),
+2025-05-06 21:58:22 - INFO - 	                         (42, 0.0003393818404292688),
+2025-05-06 21:58:22 - INFO - 	                         (43, 0.0003366213730187155),
+2025-05-06 21:58:22 - INFO - 	                         (44, 0.00033749675884610044),
+2025-05-06 21:58:22 - INFO - 	                         (45, 0.00033081323298392816),
+2025-05-06 21:58:22 - INFO - 	                         (46, 0.0003351647491217591),
+2025-05-06 21:58:22 - INFO - 	                         (47, 0.00034796853869920594),
+2025-05-06 21:58:22 - INFO - 	                         (48, 0.0003432155729678925),
+2025-05-06 21:58:22 - INFO - 	                         (49, 0.000352414638036862),
+2025-05-06 21:58:22 - INFO - 	                         (50, 0.0003342595514259301)],
+2025-05-06 21:58:22 - INFO - 	 'central_malicious_accuracy': [(0, 0.1215),
+2025-05-06 21:58:22 - INFO - 	                                (1, 0.916),
+2025-05-06 21:58:22 - INFO - 	                                (2, 0.9555),
+2025-05-06 21:58:22 - INFO - 	                                (3, 0.9658),
+2025-05-06 21:58:22 - INFO - 	                                (4, 0.9725),
+2025-05-06 21:58:22 - INFO - 	                                (5, 0.977),
+2025-05-06 21:58:22 - INFO - 	                                (6, 0.9796),
+2025-05-06 21:58:22 - INFO - 	                                (7, 0.982),
+2025-05-06 21:58:22 - INFO - 	                                (8, 0.9829),
+2025-05-06 21:58:22 - INFO - 	                                (9, 0.9847),
+2025-05-06 21:58:22 - INFO - 	                                (10, 0.9851),
+2025-05-06 21:58:22 - INFO - 	                                (11, 0.9856),
+2025-05-06 21:58:22 - INFO - 	                                (12, 0.9862),
+2025-05-06 21:58:22 - INFO - 	                                (13, 0.987),
+2025-05-06 21:58:22 - INFO - 	                                (14, 0.9872),
+2025-05-06 21:58:22 - INFO - 	                                (15, 0.9875),
+2025-05-06 21:58:22 - INFO - 	                                (16, 0.988),
+2025-05-06 21:58:22 - INFO - 	                                (17, 0.9884),
+2025-05-06 21:58:22 - INFO - 	                                (18, 0.9891),
+2025-05-06 21:58:22 - INFO - 	                                (19, 0.9892),
+2025-05-06 21:58:22 - INFO - 	                                (20, 0.9897),
+2025-05-06 21:58:22 - INFO - 	                                (21, 0.9903),
+2025-05-06 21:58:22 - INFO - 	                                (22, 0.9902),
+2025-05-06 21:58:22 - INFO - 	                                (23, 0.9903),
+2025-05-06 21:58:22 - INFO - 	                                (24, 0.9904),
+2025-05-06 21:58:22 - INFO - 	                                (25, 0.9906),
+2025-05-06 21:58:22 - INFO - 	                                (26, 0.9909),
+2025-05-06 21:58:22 - INFO - 	                                (27, 0.9911),
+2025-05-06 21:58:22 - INFO - 	                                (28, 0.9911),
+2025-05-06 21:58:22 - INFO - 	                                (29, 0.9913),
+2025-05-06 21:58:22 - INFO - 	                                (30, 0.9915),
+2025-05-06 21:58:22 - INFO - 	                                (31, 0.9916),
+2025-05-06 21:58:22 - INFO - 	                                (32, 0.992),
+2025-05-06 21:58:22 - INFO - 	                                (33, 0.9921),
+2025-05-06 21:58:22 - INFO - 	                                (34, 0.9921),
+2025-05-06 21:58:22 - INFO - 	                                (35, 0.9925),
+2025-05-06 21:58:22 - INFO - 	                                (36, 0.9924),
+2025-05-06 21:58:22 - INFO - 	                                (37, 0.9923),
+2025-05-06 21:58:22 - INFO - 	                                (38, 0.9923),
+2025-05-06 21:58:22 - INFO - 	                                (39, 0.9926),
+2025-05-06 21:58:22 - INFO - 	                                (40, 0.9927),
+2025-05-06 21:58:22 - INFO - 	                                (41, 0.9928),
+2025-05-06 21:58:22 - INFO - 	                                (42, 0.9927),
+2025-05-06 21:58:22 - INFO - 	                                (43, 0.9928),
+2025-05-06 21:58:22 - INFO - 	                                (44, 0.9928),
+2025-05-06 21:58:22 - INFO - 	                                (45, 0.9929),
+2025-05-06 21:58:22 - INFO - 	                                (46, 0.993),
+2025-05-06 21:58:22 - INFO - 	                                (47, 0.993),
+2025-05-06 21:58:22 - INFO - 	                                (48, 0.9929),
+2025-05-06 21:58:22 - INFO - 	                                (49, 0.9928),
+2025-05-06 21:58:22 - INFO - 	                                (50, 0.9927)],
+2025-05-06 21:58:22 - INFO - 	 'central_malicious_loss': [(0, 0.07206743800640106),
+2025-05-06 21:58:22 - INFO - 	                            (1, 0.009623030105605722),
+2025-05-06 21:58:22 - INFO - 	                            (2, 0.004535231618653051),
+2025-05-06 21:58:22 - INFO - 	                            (3, 0.003282934548170306),
+2025-05-06 21:58:22 - INFO - 	                            (4, 0.002626995502685895),
+2025-05-06 21:58:22 - INFO - 	                            (5, 0.002228205276108929),
+2025-05-06 21:58:22 - INFO - 	                            (6, 0.001957709988861461),
+2025-05-06 21:58:22 - INFO - 	                            (7, 0.0017532478332926984),
+2025-05-06 21:58:22 - INFO - 	                            (8, 0.0015984616028450545),
+2025-05-06 21:58:22 - INFO - 	                            (9, 0.0014739318440268106),
+2025-05-06 21:58:22 - INFO - 	                            (10, 0.0013738872457557591),
+2025-05-06 21:58:22 - INFO - 	                            (11, 0.0013002430775828544),
+2025-05-06 21:58:22 - INFO - 	                            (12, 0.0012355844030622393),
+2025-05-06 21:58:22 - INFO - 	                            (13, 0.001175867255137564),
+2025-05-06 21:58:22 - INFO - 	                            (14, 0.0011223076040387241),
+2025-05-06 21:58:22 - INFO - 	                            (15, 0.0010807987877480627),
+2025-05-06 21:58:22 - INFO - 	                            (16, 0.0010420132451485187),
+2025-05-06 21:58:22 - INFO - 	                            (17, 0.001007264325487631),
+2025-05-06 21:58:22 - INFO - 	                            (18, 0.000979392017664759),
+2025-05-06 21:58:22 - INFO - 	                            (19, 0.0009552941171608836),
+2025-05-06 21:58:22 - INFO - 	                            (20, 0.0009328380235536316),
+2025-05-06 21:58:22 - INFO - 	                            (21, 0.0009124304643818505),
+2025-05-06 21:58:22 - INFO - 	                            (22, 0.0008934071306721307),
+2025-05-06 21:58:22 - INFO - 	                            (23, 0.0008781951802109688),
+2025-05-06 21:58:22 - INFO - 	                            (24, 0.0008646981103698635),
+2025-05-06 21:58:22 - INFO - 	                            (25, 0.0008521878223292333),
+2025-05-06 21:58:22 - INFO - 	                            (26, 0.0008373531038182591),
+2025-05-06 21:58:22 - INFO - 	                            (27, 0.000828054564887907),
+2025-05-06 21:58:22 - INFO - 	                            (28, 0.0008213189421800053),
+2025-05-06 21:58:22 - INFO - 	                            (29, 0.000810455755071962),
+2025-05-06 21:58:22 - INFO - 	                            (30, 0.0008026213386255222),
+2025-05-06 21:58:22 - INFO - 	                            (31, 0.0007966724432785213),
+2025-05-06 21:58:22 - INFO - 	                            (32, 0.0007963146517225596),
+2025-05-06 21:58:22 - INFO - 	                            (33, 0.0007839060637101057),
+2025-05-06 21:58:22 - INFO - 	                            (34, 0.0007832404328471512),
+2025-05-06 21:58:22 - INFO - 	                            (35, 0.0007719184760179815),
+2025-05-06 21:58:22 - INFO - 	                            (36, 0.000768934646638013),
+2025-05-06 21:58:22 - INFO - 	                            (37, 0.0007650752208039194),
+2025-05-06 21:58:22 - INFO - 	                            (38, 0.0007596598423136584),
+2025-05-06 21:58:22 - INFO - 	                            (39, 0.0007554923986387848),
+2025-05-06 21:58:22 - INFO - 	                            (40, 0.0007552938413143693),
+2025-05-06 21:58:22 - INFO - 	                            (41, 0.0007500496657253734),
+2025-05-06 21:58:22 - INFO - 	                            (42, 0.0007532224240799679),
+2025-05-06 21:58:22 - INFO - 	                            (43, 0.000754503287923103),
+2025-05-06 21:58:22 - INFO - 	                            (44, 0.0007521957480847732),
+2025-05-06 21:58:22 - INFO - 	                            (45, 0.0007518561129560339),
+2025-05-06 21:58:22 - INFO - 	                            (46, 0.0007501763912404272),
+2025-05-06 21:58:22 - INFO - 	                            (47, 0.0007486559575318324),
+2025-05-06 21:58:22 - INFO - 	                            (48, 0.0007462057783635828),
+2025-05-06 21:58:22 - INFO - 	                            (49, 0.0007435671640440944),
+2025-05-06 21:58:22 - INFO - 	                            (50, 0.0007417208755869865)]}
+2025-05-06 21:58:22 - INFO - 
+2025-05-06 21:58:23 - INFO - Starting Federated Learning Simulation: dataset type: iid, dataset name: mnist, strategy: FedAvg(accept_failures=True), rounds: 50, clients: 20
+2025-05-06 21:58:23 - WARNING - DEPRECATED FEATURE: flwr.simulation.start_simulation() is deprecated.
+	Instead, use the `flwr run` CLI command to start a local simulation in your Flower app, as shown for example below:
+
+		$ flwr new  # Create a new Flower app from a template
+
+		$ flwr run  # Run the Flower app in Simulation Mode
+
+	Using `start_simulation()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2025-05-06 21:58:23 - INFO - Starting Flower simulation, config: num_rounds=50, no round_timeout
+2025-05-06 21:58:27 - INFO - Flower VCE: Ray initialized with resources: {'accelerator_type:G': 1.0, 'node:__internal_head__': 1.0, 'CPU': 24.0, 'object_store_memory': 5958008832.0, 'node:127.0.0.1': 1.0, 'memory': 11916017664.0, 'GPU': 1.0}
+2025-05-06 21:58:27 - INFO - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+2025-05-06 21:58:27 - INFO - No `client_resources` specified. Using minimal resources for clients.
+2025-05-06 21:58:27 - INFO - Flower VCE: Resources for each Virtual Client: {'num_cpus': 1, 'num_gpus': 0.0}
+2025-05-06 21:58:27 - INFO - Flower VCE: Creating VirtualClientEngineActorPool with 24 actors
+2025-05-06 21:58:27 - INFO - [INIT]
+2025-05-06 21:58:27 - INFO - Requesting initial parameters from one random client
+2025-05-06 21:58:31 - INFO - Received initial parameters from one random client
+2025-05-06 21:58:31 - INFO - Starting evaluation of initial global parameters
+2025-05-06 21:58:34 - INFO - initial parameters (loss, other metrics): 0.07382761383056641, {'central_global_loss': 0.07382761383056641, 'central_global_accuracy': 0.098, 'central_clean_loss': 0.07206743800640106, 'central_clean_accuracy': 0.1215, 'central_malicious_loss': 0.07206743800640106, 'central_malicious_accuracy': 0.1215}
+2025-05-06 21:58:34 - INFO - 
+2025-05-06 21:58:34 - INFO - [ROUND 1]
+2025-05-06 21:58:34 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:58:43 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:58:43 - WARNING - No fit_metrics_aggregation_fn provided
+2025-05-06 21:58:46 - INFO - fit progress: (1, 0.010037770688533783, {'central_global_loss': 0.010037770688533783, 'central_global_accuracy': 0.912, 'central_clean_loss': 0.009623030349612236, 'central_clean_accuracy': 0.916, 'central_malicious_loss': 0.009623030349612236, 'central_malicious_accuracy': 0.916}, 12.153281800000002)
+2025-05-06 21:58:46 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:58:47 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:58:47 - INFO - 
+2025-05-06 21:58:47 - INFO - [ROUND 2]
+2025-05-06 21:58:47 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:58:51 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:58:55 - INFO - fit progress: (2, 0.0045959467887878415, {'central_global_loss': 0.0045959467887878415, 'central_global_accuracy': 0.954, 'central_clean_loss': 0.0045350167025346305, 'central_clean_accuracy': 0.9555, 'central_malicious_loss': 0.0045350167025346305, 'central_malicious_accuracy': 0.9555}, 20.516580900000008)
+2025-05-06 21:58:55 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:58:55 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:58:55 - INFO - 
+2025-05-06 21:58:55 - INFO - [ROUND 3]
+2025-05-06 21:58:55 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:58:59 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:59:02 - INFO - fit progress: (3, 0.003133520521223545, {'central_global_loss': 0.003133520521223545, 'central_global_accuracy': 0.964, 'central_clean_loss': 0.0032814556243713016, 'central_clean_accuracy': 0.9657, 'central_malicious_loss': 0.0032814556243713016, 'central_malicious_accuracy': 0.9657}, 27.98446670000004)
+2025-05-06 21:59:02 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:59:03 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:59:03 - INFO - 
+2025-05-06 21:59:03 - INFO - [ROUND 4]
+2025-05-06 21:59:03 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:59:07 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:59:10 - INFO - fit progress: (4, 0.0023158704452216623, {'central_global_loss': 0.0023158704452216623, 'central_global_accuracy': 0.978, 'central_clean_loss': 0.002617948001943296, 'central_clean_accuracy': 0.9726, 'central_malicious_loss': 0.002617948001943296, 'central_malicious_accuracy': 0.9726}, 35.46533740000001)
+2025-05-06 21:59:10 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:59:10 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:59:10 - INFO - 
+2025-05-06 21:59:10 - INFO - [ROUND 5]
+2025-05-06 21:59:10 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:59:14 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:59:17 - INFO - fit progress: (5, 0.0018112246356904507, {'central_global_loss': 0.0018112246356904507, 'central_global_accuracy': 0.984, 'central_clean_loss': 0.002228031283974997, 'central_clean_accuracy': 0.9769, 'central_malicious_loss': 0.002228031283974997, 'central_malicious_accuracy': 0.9769}, 43.074346200000036)
+2025-05-06 21:59:17 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:59:18 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:59:18 - INFO - 
+2025-05-06 21:59:18 - INFO - [ROUND 6]
+2025-05-06 21:59:18 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:59:22 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:59:25 - INFO - fit progress: (6, 0.0015049757733941078, {'central_global_loss': 0.0015049757733941078, 'central_global_accuracy': 0.986, 'central_clean_loss': 0.0019532843577151652, 'central_clean_accuracy': 0.9796, 'central_malicious_loss': 0.0019532843577151652, 'central_malicious_accuracy': 0.9796}, 50.28235810000001)
+2025-05-06 21:59:25 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:59:25 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:59:25 - INFO - 
+2025-05-06 21:59:25 - INFO - [ROUND 7]
+2025-05-06 21:59:25 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:59:29 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 21:59:32 - INFO - fit progress: (7, 0.0013014013674110174, {'central_global_loss': 0.0013014013674110174, 'central_global_accuracy': 0.988, 'central_clean_loss': 0.0017520348798367195, 'central_clean_accuracy': 0.9816, 'central_malicious_loss': 0.0017520348798367195, 'central_malicious_accuracy': 0.9816}, 57.8670611)
+2025-05-06 21:59:32 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 21:59:33 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 21:59:33 - INFO - 
+2025-05-06 21:59:33 - INFO - [ROUND 8]
+2025-05-06 21:59:33 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 21:59:37 - INFO - aggregate_fit: received 20 results and 0 failures

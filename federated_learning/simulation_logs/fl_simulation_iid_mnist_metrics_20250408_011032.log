@@ -1,0 +1,1 @@
+2025-04-08 01:10:32 - INFO - Starting Federated Learning Simulation: dataset type: iid, dataset name: mnist, strategy: FedAvg(accept_failures=True), rounds: 20, clients: 20

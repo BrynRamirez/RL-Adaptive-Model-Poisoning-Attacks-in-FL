@@ -1,0 +1,21 @@
+2025-04-03 14:39:27 - INFO - Starting Federated Learning Simulation: dataset type: iid, dataset name: mnist, strategy: FedAvg(accept_failures=True), rounds: 10, clients: 10
+2025-04-03 14:39:27 - WARNING - DEPRECATED FEATURE: flwr.simulation.start_simulation() is deprecated.
+	Instead, use the `flwr run` CLI command to start a local simulation in your Flower app, as shown for example below:
+
+		$ flwr new  # Create a new Flower app from a template
+
+		$ flwr run  # Run the Flower app in Simulation Mode
+
+	Using `start_simulation()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2025-04-03 14:39:27 - INFO - Starting Flower simulation, config: num_rounds=10, no round_timeout
+2025-04-03 14:39:31 - INFO - Flower VCE: Ray initialized with resources: {'accelerator_type:G': 1.0, 'node:__internal_head__': 1.0, 'CPU': 24.0, 'object_store_memory': 6504570470.0, 'node:127.0.0.1': 1.0, 'memory': 13009140942.0, 'GPU': 1.0}
+2025-04-03 14:39:31 - INFO - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+2025-04-03 14:39:31 - INFO - No `client_resources` specified. Using minimal resources for clients.
+2025-04-03 14:39:31 - INFO - Flower VCE: Resources for each Virtual Client: {'num_cpus': 1, 'num_gpus': 0.0}
+2025-04-03 14:39:31 - INFO - Flower VCE: Creating VirtualClientEngineActorPool with 24 actors
+2025-04-03 14:39:31 - INFO - [INIT]
+2025-04-03 14:39:31 - INFO - Requesting initial parameters from one random client

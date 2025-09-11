@@ -1,0 +1,231 @@
+2025-04-08 01:53:03 - INFO - Starting Federated Learning Simulation: dataset type: iid, dataset name: mnist, strategy: FedAvg(accept_failures=True), rounds: 20, clients: 20
+2025-04-08 01:53:03 - WARNING - DEPRECATED FEATURE: flwr.simulation.start_simulation() is deprecated.
+	Instead, use the `flwr run` CLI command to start a local simulation in your Flower app, as shown for example below:
+
+		$ flwr new  # Create a new Flower app from a template
+
+		$ flwr run  # Run the Flower app in Simulation Mode
+
+	Using `start_simulation()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2025-04-08 01:53:03 - INFO - Starting Flower simulation, config: num_rounds=20, no round_timeout
+2025-04-08 01:53:06 - INFO - Flower VCE: Ray initialized with resources: {'accelerator_type:G': 1.0, 'node:__internal_head__': 1.0, 'CPU': 24.0, 'memory': 12685610190.0, 'node:127.0.0.1': 1.0, 'object_store_memory': 6342805094.0, 'GPU': 1.0}
+2025-04-08 01:53:06 - INFO - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+2025-04-08 01:53:06 - INFO - No `client_resources` specified. Using minimal resources for clients.
+2025-04-08 01:53:06 - INFO - Flower VCE: Resources for each Virtual Client: {'num_cpus': 1, 'num_gpus': 0.0}
+2025-04-08 01:53:06 - INFO - Flower VCE: Creating VirtualClientEngineActorPool with 24 actors
+2025-04-08 01:53:06 - INFO - [INIT]
+2025-04-08 01:53:06 - INFO - Requesting initial parameters from one random client
+2025-04-08 01:53:09 - INFO - Received initial parameters from one random client
+2025-04-08 01:53:09 - INFO - Starting evaluation of initial global parameters
+2025-04-08 01:53:09 - INFO - Evaluation returned no results (`None`)
+2025-04-08 01:53:09 - INFO - 
+2025-04-08 01:53:09 - INFO - [ROUND 1]
+2025-04-08 01:53:09 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:16 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:53:16 - WARNING - No fit_metrics_aggregation_fn provided
+2025-04-08 01:53:16 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:17 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:53:17 - INFO - 
+2025-04-08 01:53:17 - INFO - [ROUND 2]
+2025-04-08 01:53:17 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:21 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:53:21 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:21 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:53:21 - INFO - 
+2025-04-08 01:53:21 - INFO - [ROUND 3]
+2025-04-08 01:53:21 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:25 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:53:25 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:25 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:53:25 - INFO - 
+2025-04-08 01:53:25 - INFO - [ROUND 4]
+2025-04-08 01:53:25 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:29 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:53:29 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:29 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:53:29 - INFO - 
+2025-04-08 01:53:29 - INFO - [ROUND 5]
+2025-04-08 01:53:29 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:33 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:53:33 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:34 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:53:34 - INFO - 
+2025-04-08 01:53:34 - INFO - [ROUND 6]
+2025-04-08 01:53:34 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:37 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:53:37 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:38 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:53:38 - INFO - 
+2025-04-08 01:53:38 - INFO - [ROUND 7]
+2025-04-08 01:53:38 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:42 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:53:42 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:42 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:53:42 - INFO - 
+2025-04-08 01:53:42 - INFO - [ROUND 8]
+2025-04-08 01:53:42 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:46 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:53:46 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:47 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:53:47 - INFO - 
+2025-04-08 01:53:47 - INFO - [ROUND 9]
+2025-04-08 01:53:47 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:50 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:53:50 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:51 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:53:51 - INFO - 
+2025-04-08 01:53:51 - INFO - [ROUND 10]
+2025-04-08 01:53:51 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:55 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:53:55 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:55 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:53:55 - INFO - 
+2025-04-08 01:53:55 - INFO - [ROUND 11]
+2025-04-08 01:53:55 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:53:59 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:53:59 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:00 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:54:00 - INFO - 
+2025-04-08 01:54:00 - INFO - [ROUND 12]
+2025-04-08 01:54:00 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:04 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:54:04 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:04 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:54:04 - INFO - 
+2025-04-08 01:54:04 - INFO - [ROUND 13]
+2025-04-08 01:54:04 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:08 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:54:08 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:09 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:54:09 - INFO - 
+2025-04-08 01:54:09 - INFO - [ROUND 14]
+2025-04-08 01:54:09 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:13 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:54:13 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:13 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:54:13 - INFO - 
+2025-04-08 01:54:13 - INFO - [ROUND 15]
+2025-04-08 01:54:13 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:17 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:54:17 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:17 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:54:17 - INFO - 
+2025-04-08 01:54:17 - INFO - [ROUND 16]
+2025-04-08 01:54:17 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:21 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:54:21 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:22 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:54:22 - INFO - 
+2025-04-08 01:54:22 - INFO - [ROUND 17]
+2025-04-08 01:54:22 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:26 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:54:26 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:26 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:54:26 - INFO - 
+2025-04-08 01:54:26 - INFO - [ROUND 18]
+2025-04-08 01:54:26 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:30 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:54:30 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:31 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:54:31 - INFO - 
+2025-04-08 01:54:31 - INFO - [ROUND 19]
+2025-04-08 01:54:31 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:35 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:54:35 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:35 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:54:35 - INFO - 
+2025-04-08 01:54:35 - INFO - [ROUND 20]
+2025-04-08 01:54:35 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:39 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-04-08 01:54:39 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-04-08 01:54:39 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-04-08 01:54:39 - INFO - 
+2025-04-08 01:54:39 - INFO - [SUMMARY]
+2025-04-08 01:54:39 - INFO - Run finished 20 round(s) in 90.26s
+2025-04-08 01:54:39 - INFO - 	History (loss, distributed):
+2025-04-08 01:54:39 - INFO - 		round 1: 0.9366
+2025-04-08 01:54:39 - INFO - 		round 2: 0.9625
+2025-04-08 01:54:39 - INFO - 		round 3: 0.971
+2025-04-08 01:54:39 - INFO - 		round 4: 0.9752
+2025-04-08 01:54:39 - INFO - 		round 5: 0.9789
+2025-04-08 01:54:39 - INFO - 		round 6: 0.9807
+2025-04-08 01:54:39 - INFO - 		round 7: 0.9816
+2025-04-08 01:54:39 - INFO - 		round 8: 0.9832
+2025-04-08 01:54:39 - INFO - 		round 9: 0.9849
+2025-04-08 01:54:39 - INFO - 		round 10: 0.9848
+2025-04-08 01:54:39 - INFO - 		round 11: 0.9861
+2025-04-08 01:54:39 - INFO - 		round 12: 0.9868
+2025-04-08 01:54:39 - INFO - 		round 13: 0.9869
+2025-04-08 01:54:39 - INFO - 		round 14: 0.9875
+2025-04-08 01:54:39 - INFO - 		round 15: 0.9887
+2025-04-08 01:54:39 - INFO - 		round 16: 0.9878
+2025-04-08 01:54:39 - INFO - 		round 17: 0.9886
+2025-04-08 01:54:39 - INFO - 		round 18: 0.9884
+2025-04-08 01:54:39 - INFO - 		round 19: 0.989
+2025-04-08 01:54:39 - INFO - 		round 20: 0.9886
+2025-04-08 01:54:39 - INFO - 	History (metrics, distributed, evaluate):
+2025-04-08 01:54:39 - INFO - 	{'accuracy': [(1, 0.9366),
+2025-04-08 01:54:39 - INFO - 	              (2, 0.9625),
+2025-04-08 01:54:39 - INFO - 	              (3, 0.971),
+2025-04-08 01:54:39 - INFO - 	              (4, 0.9752),
+2025-04-08 01:54:39 - INFO - 	              (5, 0.9789),
+2025-04-08 01:54:39 - INFO - 	              (6, 0.9807),
+2025-04-08 01:54:39 - INFO - 	              (7, 0.9816),
+2025-04-08 01:54:39 - INFO - 	              (8, 0.9832),
+2025-04-08 01:54:39 - INFO - 	              (9, 0.9849),
+2025-04-08 01:54:39 - INFO - 	              (10, 0.9848),
+2025-04-08 01:54:39 - INFO - 	              (11, 0.9861),
+2025-04-08 01:54:39 - INFO - 	              (12, 0.9868),
+2025-04-08 01:54:39 - INFO - 	              (13, 0.9869),
+2025-04-08 01:54:39 - INFO - 	              (14, 0.9875),
+2025-04-08 01:54:39 - INFO - 	              (15, 0.9887),
+2025-04-08 01:54:39 - INFO - 	              (16, 0.9878),
+2025-04-08 01:54:39 - INFO - 	              (17, 0.9886),
+2025-04-08 01:54:39 - INFO - 	              (18, 0.9884),
+2025-04-08 01:54:39 - INFO - 	              (19, 0.989),
+2025-04-08 01:54:39 - INFO - 	              (20, 0.9886)],
+2025-04-08 01:54:39 - INFO - 	 'clean_accuracy': [(1, 0.934125),
+2025-04-08 01:54:39 - INFO - 	                    (2, 0.9595),
+2025-04-08 01:54:39 - INFO - 	                    (3, 0.96775),
+2025-04-08 01:54:39 - INFO - 	                    (4, 0.9725),
+2025-04-08 01:54:39 - INFO - 	                    (5, 0.976375),
+2025-04-08 01:54:39 - INFO - 	                    (6, 0.978625),
+2025-04-08 01:54:39 - INFO - 	                    (7, 0.979125),
+2025-04-08 01:54:39 - INFO - 	                    (8, 0.981375),
+2025-04-08 01:54:39 - INFO - 	                    (9, 0.983),
+2025-04-08 01:54:39 - INFO - 	                    (10, 0.982875),
+2025-04-08 01:54:39 - INFO - 	                    (11, 0.984125),
+2025-04-08 01:54:39 - INFO - 	                    (12, 0.98525),
+2025-04-08 01:54:39 - INFO - 	                    (13, 0.985375),
+2025-04-08 01:54:39 - INFO - 	                    (14, 0.985875),
+2025-04-08 01:54:39 - INFO - 	                    (15, 0.9875),
+2025-04-08 01:54:39 - INFO - 	                    (16, 0.986375),
+2025-04-08 01:54:39 - INFO - 	                    (17, 0.98725),
+2025-04-08 01:54:39 - INFO - 	                    (18, 0.987),
+2025-04-08 01:54:39 - INFO - 	                    (19, 0.9875),
+2025-04-08 01:54:39 - INFO - 	                    (20, 0.98725)],
+2025-04-08 01:54:39 - INFO - 	 'malicious_accuracy': [(1, 0.9465),
+2025-04-08 01:54:39 - INFO - 	                        (2, 0.9745),
+2025-04-08 01:54:39 - INFO - 	                        (3, 0.984),
+2025-04-08 01:54:39 - INFO - 	                        (4, 0.986),
+2025-04-08 01:54:39 - INFO - 	                        (5, 0.989),
+2025-04-08 01:54:39 - INFO - 	                        (6, 0.989),
+2025-04-08 01:54:39 - INFO - 	                        (7, 0.9915),
+2025-04-08 01:54:39 - INFO - 	                        (8, 0.9905),
+2025-04-08 01:54:39 - INFO - 	                        (9, 0.9925),
+2025-04-08 01:54:39 - INFO - 	                        (10, 0.9925),
+2025-04-08 01:54:39 - INFO - 	                        (11, 0.994),
+2025-04-08 01:54:39 - INFO - 	                        (12, 0.993),
+2025-04-08 01:54:39 - INFO - 	                        (13, 0.993),
+2025-04-08 01:54:39 - INFO - 	                        (14, 0.994),
+2025-04-08 01:54:39 - INFO - 	                        (15, 0.9935),
+2025-04-08 01:54:39 - INFO - 	                        (16, 0.9935),
+2025-04-08 01:54:39 - INFO - 	                        (17, 0.994),
+2025-04-08 01:54:39 - INFO - 	                        (18, 0.994),
+2025-04-08 01:54:39 - INFO - 	                        (19, 0.995),
+2025-04-08 01:54:39 - INFO - 	                        (20, 0.994)]}
+2025-04-08 01:54:39 - INFO - 

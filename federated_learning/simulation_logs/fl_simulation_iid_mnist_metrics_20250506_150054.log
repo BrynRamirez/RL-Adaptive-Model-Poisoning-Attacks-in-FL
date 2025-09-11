@@ -1,0 +1,85 @@
+2025-05-06 15:00:54 - INFO - Starting Federated Learning Simulation: dataset type: iid, dataset name: mnist, strategy: FedAvg(accept_failures=True), rounds: 50, clients: 20
+2025-05-06 15:00:54 - WARNING - DEPRECATED FEATURE: flwr.simulation.start_simulation() is deprecated.
+	Instead, use the `flwr run` CLI command to start a local simulation in your Flower app, as shown for example below:
+
+		$ flwr new  # Create a new Flower app from a template
+
+		$ flwr run  # Run the Flower app in Simulation Mode
+
+	Using `start_simulation()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2025-05-06 15:00:54 - INFO - Starting Flower simulation, config: num_rounds=50, no round_timeout
+2025-05-06 15:00:57 - INFO - Flower VCE: Ray initialized with resources: {'accelerator_type:G': 1.0, 'node:__internal_head__': 1.0, 'CPU': 24.0, 'object_store_memory': 5716984627.0, 'node:127.0.0.1': 1.0, 'memory': 11433969255.0, 'GPU': 1.0}
+2025-05-06 15:00:57 - INFO - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+2025-05-06 15:00:57 - INFO - No `client_resources` specified. Using minimal resources for clients.
+2025-05-06 15:00:57 - INFO - Flower VCE: Resources for each Virtual Client: {'num_cpus': 1, 'num_gpus': 0.0}
+2025-05-06 15:00:57 - INFO - Flower VCE: Creating VirtualClientEngineActorPool with 24 actors
+2025-05-06 15:00:57 - INFO - [INIT]
+2025-05-06 15:00:57 - INFO - Requesting initial parameters from one random client
+2025-05-06 15:01:00 - INFO - Received initial parameters from one random client
+2025-05-06 15:01:00 - INFO - Starting evaluation of initial global parameters
+2025-05-06 15:01:04 - INFO - initial parameters (loss, other metrics): 0.07382761383056641, {'central_global_loss': 0.07382761383056641, 'central_global_accuracy': 0.098, 'central_clean_loss': 0.07206743800640106, 'central_clean_accuracy': 0.1215, 'central_malicious_loss': 0.07206743800640106, 'central_malicious_accuracy': 0.1215}
+2025-05-06 15:01:04 - INFO - 
+2025-05-06 15:01:04 - INFO - [ROUND 1]
+2025-05-06 15:01:04 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 15:01:12 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 15:01:12 - WARNING - No fit_metrics_aggregation_fn provided
+2025-05-06 15:01:15 - INFO - fit progress: (1, 0.010037770599126816, {'central_global_loss': 0.010037770599126816, 'central_global_accuracy': 0.912, 'central_clean_loss': 0.009623030304908752, 'central_clean_accuracy': 0.916, 'central_malicious_loss': 0.009623030304908752, 'central_malicious_accuracy': 0.916}, 11.0156989)
+2025-05-06 15:01:15 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 15:01:15 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 15:01:15 - INFO - 
+2025-05-06 15:01:15 - INFO - [ROUND 2]
+2025-05-06 15:01:15 - INFO - configure_fit: strategy sampled 20 clients (out of 20)
+2025-05-06 15:01:19 - INFO - aggregate_fit: received 20 results and 0 failures
+2025-05-06 15:01:22 - INFO - fit progress: (2, 0.004595658384263516, {'central_global_loss': 0.004595658384263516, 'central_global_accuracy': 0.954, 'central_clean_loss': 0.004535480613051914, 'central_clean_accuracy': 0.9555, 'central_malicious_loss': 0.004535480613051914, 'central_malicious_accuracy': 0.9555}, 18.0984729)
+2025-05-06 15:01:22 - INFO - configure_evaluate: strategy sampled 20 clients (out of 20)
+2025-05-06 15:01:22 - INFO - aggregate_evaluate: received 20 results and 0 failures
+2025-05-06 15:01:22 - ERROR - mat1 and mat2 shapes cannot be multiplied (32x3 and 4x64)
+2025-05-06 15:01:22 - ERROR - Traceback (most recent call last):
+  File "C:\RL Adaptive Model Poisoning Attacks in FL\.venv\lib\site-packages\flwr\simulation\legacy_app.py", line 361, in start_simulation
+    hist = run_fl(
+  File "C:\RL Adaptive Model Poisoning Attacks in FL\.venv\lib\site-packages\flwr\server\server.py", line 492, in run_fl
+    hist, elapsed_time = server.fit(
+  File "C:\RL Adaptive Model Poisoning Attacks in FL\.venv\lib\site-packages\flwr\server\server.py", line 145, in fit
+    res_fed = self.evaluate_round(server_round=current_round, timeout=timeout)
+  File "C:\RL Adaptive Model Poisoning Attacks in FL\.venv\lib\site-packages\flwr\server\server.py", line 203, in evaluate_round
+    ] = self.strategy.aggregate_evaluate(server_round, results, failures)
+  File "c:\rl adaptive model poisoning attacks in fl\federated_learning\aggregation_methods\rl_strategy.py", line 48, in aggregate_evaluate
+    self.rl_defense.train_on_round(client_states, client_actions, global_metrics)
+  File "c:\rl adaptive model poisoning attacks in fl\deep_reinforcement_learning\rl_defense\rl_defense.py", line 36, in train_on_round
+    self.agent.train_step()
+  File "c:\rl adaptive model poisoning attacks in fl\deep_reinforcement_learning\rl_defense\dqn_agent.py", line 84, in train_step
+    q_values = self.policy_net(state).gather(1, action.unsqueeze(1)).squeeze()
+  File "C:\RL Adaptive Model Poisoning Attacks in FL\.venv\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\RL Adaptive Model Poisoning Attacks in FL\.venv\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "c:\rl adaptive model poisoning attacks in fl\deep_reinforcement_learning\rl_defense\dqn_agent.py", line 38, in forward
+    return self.net(x)
+  File "C:\RL Adaptive Model Poisoning Attacks in FL\.venv\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\RL Adaptive Model Poisoning Attacks in FL\.venv\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\RL Adaptive Model Poisoning Attacks in FL\.venv\lib\site-packages\torch\nn\modules\container.py", line 250, in forward
+    input = module(input)
+  File "C:\RL Adaptive Model Poisoning Attacks in FL\.venv\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\RL Adaptive Model Poisoning Attacks in FL\.venv\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\RL Adaptive Model Poisoning Attacks in FL\.venv\lib\site-packages\torch\nn\modules\linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (32x3 and 4x64)
+
+2025-05-06 15:01:22 - ERROR - Your simulation crashed :(. This could be because of several reasons. The most common are: 
+	 > Sometimes, issues in the simulation code itself can cause crashes. It's always a good idea to double-check your code for any potential bugs or inconsistencies that might be contributing to the problem. For example: 
+		 - You might be using a class attribute in your clients that hasn't been defined.
+		 - There could be an incorrect method call to a 3rd party library (e.g., PyTorch).
+		 - The return types of methods in your clients/strategies might be incorrect.
+	 > Your system couldn't fit a single VirtualClient: try lowering `client_resources`.
+	 > All the actors in your pool crashed. This could be because: 
+		 - You clients hit an out-of-memory (OOM) error and actors couldn't recover from it. Try launching your simulation with more generous `client_resources` setting (i.e. it seems {'num_cpus': 1, 'num_gpus': 0.0} is not enough for your run). Use fewer concurrent actors. 
+		 - You were running a multi-node simulation and all worker nodes disconnected. The head node might still be alive but cannot accommodate any actor with resources: {'num_cpus': 1, 'num_gpus': 0.0}.
+Take a look at the Flower simulation examples for guidance <https://flower.ai/docs/framework/how-to-run-simulations.html>.

@@ -12,6 +12,7 @@ from federated_learning.metrics.csv_metrics import export_metrics_to_csv
 
 from federated_learning.aggregation_methods.RL_FedAvg_strategy import RLDefenseStrategy
 from federated_learning.aggregation_methods.FedAvg_strategy import AggregateCustomMetricStrategy
+from federated_learning.aggregation_methods.TrimmedMean_strategy import FedTrimmedAvg
 
 # evaluate test clients
 def centralized_test_evaluate(server_round, parameters, config):
@@ -46,6 +47,19 @@ def start_federated_simulation(num_rounds=50, num_clients=20, dataset_type='', d
             total_clients=num_clients,
             evaluate_fn=lambda r, p, c: centralized_test_evaluate(r, p, {"dataset_type": dataset_type,
                                                                            "dataset_name": dataset_name})
+        )
+    elif aggregation_strategy == 'TrimmedMean':
+        print("[Aggregation Strategy]: TrimmedMean")
+        strategy = FedTrimmedAvg(
+            min_fit_clients=num_clients,
+            min_available_clients=num_clients,
+            total_rounds=num_rounds,
+            total_clients=num_clients,
+            beta=0.2,  # trimming parameter
+            evaluate_fn=lambda r, p, c: centralized_test_evaluate(r, p,{
+                "dataset_type": dataset_type,
+                "dataset_name": dataset_name
+            })
         )
     elif aggregation_strategy == 'RL_FedAvg':
         print("[Aggregation Strategy]: RL_FedAvg")
@@ -95,6 +109,7 @@ def start_federated_simulation(num_rounds=50, num_clients=20, dataset_type='', d
         """Use poisoned_client_fn for some clients."""
         # Convert client id to int (in case it's a string)
         client_id = int(cid)
+        print(f"[CID]: {client_id}")
 
         if attack_strategy.lower() == 'none':
             is_malicious = False
@@ -123,7 +138,7 @@ def start_federated_simulation(num_rounds=50, num_clients=20, dataset_type='', d
 if __name__ == "__main__":
     RUN_ID = datetime.now().strftime('%Y%m%d_%H%M%S')
 
-   # MNIST Simulations
+   # # MNIST Simulations
    #  mnist_simulation_start_time = time.time()
    #  print("Starting Baseline MNIST simulation using FedAvg.")
    #  mnist_baseline_history = start_federated_simulation(
@@ -131,27 +146,29 @@ if __name__ == "__main__":
    #      num_clients=20,
    #      dataset_type='iid',
    #      dataset_name='mnist',
-   #      attack_strategy='none'
+   #      attack_strategy='none',
+   #      aggregation_strategy='FedAvg',
    #  )
    #  # clear memory in between simulations
    #  gc.collect()
    #  torch.cuda.empty_cache()
    #
    #  time.sleep(1)
-
-    # print("Starting Adaptive Scaling MNIST simulation using FedAvg.")
-    # mnist_scale_history = start_federated_simulation(
-    #     num_rounds=50,
-    #     num_clients=20,
-    #     dataset_type='iid',
-    #     dataset_name='mnist',
-    #     attack_strategy='scale'
-    # )
-    # # clear memory in between simulations
-    # gc.collect()
-    # torch.cuda.empty_cache()
-    #
-    # time.sleep(1)
+   #
+   #  print("Starting Adaptive Scaling MNIST simulation using FedAvg.")
+   #  mnist_scale_history = start_federated_simulation(
+   #      num_rounds=50,
+   #      num_clients=20,
+   #      dataset_type='iid',
+   #      dataset_name='mnist',
+   #      attack_strategy='scale',
+   #      aggregation_strategy='FedAvg',
+   #  )
+   #  # clear memory in between simulations
+   #  gc.collect()
+   #  torch.cuda.empty_cache()
+   #
+   #  time.sleep(1)
 
     print("Starting Adaptive Noise MNIST simulation.")
     mnist_noise_history = start_federated_simulation(
@@ -172,16 +189,17 @@ if __name__ == "__main__":
     #     num_clients=20,
     #     dataset_type='iid',
     #     dataset_name='mnist',
-    #     attack_strategy='rl'
+    #     attack_strategy='rl',
+    #     aggregation_strategy='FedAvg',
     # )
     # # clear memory in between simulations
     # gc.collect()
     # torch.cuda.empty_cache()
-    #
+
     # time.sleep(1)
     # mnist_simulation_end_time = time.time()
     # print('MNIST Simulation Time:', mnist_simulation_end_time - mnist_simulation_start_time)
-
+    #
     # # CIFAR10 Simulations
     # cifar10_simulation_start_time = time.time()
     # print("Starting Baseline CIFAR10 simulation using FedAvg.")
@@ -190,7 +208,8 @@ if __name__ == "__main__":
     #     num_clients=20,
     #     dataset_type='iid',
     #     dataset_name='cifar10',
-    #     attack_strategy='none'
+    #     attack_strategy='none',
+    #     aggregation_strategy = 'FedAvg',
     # )
     # # clear memory in between simulations
     # gc.collect()
@@ -204,7 +223,8 @@ if __name__ == "__main__":
     #     num_clients=20,
     #     dataset_type='iid',
     #     dataset_name='cifar10',
-    #     attack_strategy='scale'
+    #     attack_strategy='scale',
+    #     aggregation_strategy='FedAvg',
     # )
     # # clear memory in between simulations
     # gc.collect()
@@ -218,21 +238,23 @@ if __name__ == "__main__":
     #     num_clients=20,
     #     dataset_type='iid',
     #     dataset_name='cifar10',
-    #     attack_strategy='noise'
+    #     attack_strategy='noise',
+    #     aggregation_strategy='FedAvg',
     # )
     # # clear memory in between simulations
     # gc.collect()
     # torch.cuda.empty_cache()
     #
     # time.sleep(1)
-    #
+
     # print("Starting RL Adaptive  CIFAR10 simulation using FedAvg.")
     # cifar10_rl_history = start_federated_simulation(
     #     num_rounds=50,
     #     num_clients=20,
     #     dataset_type='iid',
     #     dataset_name='cifar10',
-    #     attack_strategy='rl'
+    #     attack_strategy='rl',
+    #     aggregation_strategy='FedAvg',
     # )
     # # clear memory in between simulations
     # gc.collect()
@@ -250,7 +272,8 @@ if __name__ == "__main__":
     #     num_clients=20,
     #     dataset_type='non_iid',
     #     dataset_name='emnist',
-    #     attack_strategy='none'
+    #     attack_strategy='none',
+    #     aggregation_strategy='FedAvg',
     # )
     # # clear memory in between simulations
     # gc.collect()
@@ -264,7 +287,8 @@ if __name__ == "__main__":
     #     num_clients=20,
     #     dataset_type='non_iid',
     #     dataset_name='emnist',
-    #     attack_strategy='scale'
+    #     attack_strategy='scale',
+    #     aggregation_strategy='FedAvg',
     # )
     # # clear memory in between simulations
     # gc.collect()
@@ -278,7 +302,8 @@ if __name__ == "__main__":
     #     num_clients=20,
     #     dataset_type='non_iid',
     #     dataset_name='emnist',
-    #     attack_strategy='noise'
+    #     attack_strategy='noise',
+    #     aggregation_strategy='FedAvg',
     # )
     # # clear memory in between simulations
     # gc.collect()
@@ -290,7 +315,8 @@ if __name__ == "__main__":
     #     num_clients=20,
     #     dataset_type='non_iid',
     #     dataset_name='emnist',
-    #     attack_strategy='rl'
+    #     attack_strategy='rl',
+    #     aggregation_strategy='FedAvg',
     # )
     # # clear memory in between simulations
     # gc.collect()
@@ -308,7 +334,8 @@ if __name__ == "__main__":
     #     num_clients=20,
     #     dataset_type='non_iid',
     #     dataset_name='cifar100',
-    #     attack_strategy='none'
+    #     attack_strategy='none',
+    #     aggregation_strategy='FedAvg',
     # )
     # # clear memory in between simulations
     # gc.collect()
@@ -322,7 +349,8 @@ if __name__ == "__main__":
     #     num_clients=20,
     #     dataset_type='non_iid',
     #     dataset_name='cifar100',
-    #     attack_strategy='scale'
+    #     attack_strategy='scale',
+    #     aggregation_strategy='FedAvg',
     # )
     # # clear memory in between simulations
     # gc.collect()
@@ -336,19 +364,21 @@ if __name__ == "__main__":
     #     num_clients=20,
     #     dataset_type='non_iid',
     #     dataset_name='cifar100',
-    #     attack_strategy='noise'
+    #     attack_strategy='noise',
+    #     aggregation_strategy='FedAvg',
     # )
     # # clear memory in between simulations
     # gc.collect()
     # torch.cuda.empty_cache()
     #
-    # print("Starting RL Adaptive CIFAR100 simulation using FedAvg.")
+    # # print("Starting RL Adaptive CIFAR100 simulation using FedAvg.")
     # cifar100_rl_history = start_federated_simulation(
     #     num_rounds=50,
     #     num_clients=20,
     #     dataset_type='non_iid',
     #     dataset_name='cifar100',
-    #     attack_strategy='rl'
+    #     attack_strategy='rl',
+    #     aggregation_strategy='FedAvg',
     # )
     # # clear memory in between simulations
     # gc.collect()
@@ -373,10 +403,10 @@ if __name__ == "__main__":
             #'rl': mnist_rl_history,
         },
         # 'cifar10': {
-        #     'none': cifar10_baseline_history,
-        #     'scale': cifar10_scale_history,
-        #     'noise': cifar10_noise_history,
-        #     'rl': cifar10_rl_history,
+            # 'none': cifar10_baseline_history,
+            # 'scale': cifar10_scale_history,
+            # 'noise': cifar10_noise_history,
+            # 'rl': cifar10_rl_history,
         # },
         # 'emnist': {
         #     'none': emnist_baseline_history,

@@ -34,9 +34,9 @@ class Poisoned_AdaptiveClient(fl.client.NumPyClient):
         self.attack_strategy = attack_strategy
         if self.is_malicious:
             if attack_strategy == 'scale':
-                self.poisoner = AdaptiveModelPoisoning(strategy='scale', max_scale=50.0)
+                self.poisoner = AdaptiveModelPoisoning(strategy='scale', max_scale=0.5)
             elif attack_strategy == 'noise':
-                self.poisoner = AdaptiveModelPoisoning(strategy='noise', noise_std=0.1)
+                self.poisoner = AdaptiveModelPoisoning(strategy='noise', noise_lower=0.001, noise_upper=0.1)
             elif attack_strategy == 'rl':
                 self.poisoner = poisoner or RLAdaptiveModelPoisoning()
             elif attack_strategy == 'none':
@@ -126,13 +126,17 @@ class Poisoned_AdaptiveClient(fl.client.NumPyClient):
         return loss_total / total, correct / total
 
     def fit(self, parameters, config):
+        """Trains local model using local data. In order to apply poisoning, we check if it is a malicious client, has
+        a poisoner defined, and if the current round is greater than 10 (allowing the global model to converge)."""
         print(f"[Client {self.cid}] Entering fit. Malicious: {self.is_malicious}")
         self.set_parameters(parameters)
+        current_round = config.get("round_num")
+        total_rounds = 50
+        print(f'[SERVER ROUND: {current_round}]')
         old_params = [p.copy() for p in parameters]
 
         self.train_model(num_epochs=1)
-        # poisoning condition or leave always-on
-        if self.is_malicious and self.poisoner is not None:
+        if self.is_malicious and self.poisoner is not None and current_round > 10:
             global_model = load_model(self.dataset_name).to(self.device)
             global_params = config.get("global_parameters", parameters)
             for param, new_param in zip(global_model.parameters(), global_params):
@@ -170,9 +174,10 @@ class Poisoned_AdaptiveClient(fl.client.NumPyClient):
                 print(f"[Client {self.cid}] Epsilon: {self.poisoner.model.epsilon:.4f}")
 
                 self.model = poisoned_model # assign updated model
+
             else:                           # normal adaptive attack
                 print(f"[Client {self.cid}] Poisoning model.")
-                self.model = self.poisoner.poison(global_model, self.model, 0, 1)
+                self.model = self.poisoner.poison(global_model, self.model, current_round, total_rounds)
 
         new_params = self.get_parameters(config)
         update_norm = self.compute_update_norm(old_params, new_params)

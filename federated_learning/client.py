@@ -82,7 +82,7 @@ class AdaptiveClient(fl.client.NumPyClient):
                     correct += (predicted == y).sum().item()
             return loss_sum / total, correct / total
 
-        full_loss, full_acc = eval_loader(self.test_loader)
+        full_loss, full_acc = eval_loader(self.test_benign_loader)
         clean_loss, clean_acc = eval_loader(self.test_benign_loader)
         mal_loss, mal_acc = eval_loader(self.test_malicious_loader)
 

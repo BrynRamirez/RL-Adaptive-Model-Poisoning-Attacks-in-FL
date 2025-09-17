@@ -1,3 +1,4 @@
 from federated_learning.client import client_fn
 from federated_learning.server import start_federated_simulation
 from federated_learning.metrics import plot_metrics
+from federated_learning.client import *

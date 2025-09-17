@@ -1,6 +1,12 @@
 # Adaptive Model Poisoning Attacks in Federated Learning Using Reinforcement Learning
 ## Installation
-Code is ran on **python3.9**, make sure you have python3.9 before executing. You can install the dependencies with pip3:
+Requires **python3.9**, make sure you have python3.9 before executing. 
+Create a virtual environment before installing the dependencies:
+> python3.9 -m venv venv
+> 
+> source venv/bin/activate
+
+You can install the dependencies with pip3:
 >pip3 install -e
 ## Running the experiment
 server.py is where the code ran. To run server.py:

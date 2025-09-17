@@ -5,5 +5,6 @@ pandas~=2.2.3
 matplotlib~=3.9.4
 torchvision~=0.21.0
 flwr~=1.17.0
+flwr[simulation]==1.7.0
 stable-baselines3~=2.6.0
 gym~=0.26.2

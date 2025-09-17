@@ -93,10 +93,15 @@ class DQNAgent:
 
 
 class RLAdaptiveModelPoisoning:
+    """Reinforcement Learning based Adaptive Model Poisoning Attack: attack type only noise-based poisoning"""
     def __init__(self, state_size=5, action_size=5):
         self.state_size = state_size
         self.action_size = action_size
         self.model = DQNAgent(state_size=state_size, action_size=action_size)
+        self.last_state = None
+        self.last_action = None
+        self.last_acc_clean = None
+        self.last_acc_mal = None
 
     def get_state(self, model_params):
         # Flatten or summarize model params to feed into RL agent
@@ -106,6 +111,7 @@ class RLAdaptiveModelPoisoning:
             flat_state.append(param.std().item())
         # Pad/truncate to match state_size
         flat_state = flat_state[:self.state_size] + [0.0] * max(0, self.state_size - len(flat_state))
+        print(f"[RL] State: {flat_state}")
         return np.array(flat_state, dtype=np.float32)
 
     def select_action(self, state):
@@ -116,7 +122,7 @@ class RLAdaptiveModelPoisoning:
 
     def poison(self, action, model):
         # Define how action maps to poisoning strength or strategy
-        poisoning_strengths = [0.0, 0.1, 0.2, 0.3, 0.4]
+        poisoning_strengths = [0.0, 0.01, 0.02, 0.03, 0.04]
         strength = poisoning_strengths[action]
         print(f"[RL] Action: {action}, Strength: {strength}")
 
@@ -133,20 +139,34 @@ class RLAdaptiveModelPoisoning:
         return model
 
     def compute_reward(self, acc_clean_before, acc_clean_after, acc_mal_before, acc_mal_after):
+        print(f"[RL] Clean Acc: {acc_clean_before:.4f} → {acc_clean_after:.4f}, ")
         gain = acc_mal_after - acc_mal_before
         loss = acc_clean_after - acc_clean_before
 
         # Configuration
-        penalty_threshold = -0.001  # penalize at 0.1% drop
+        penalty_threshold = -0.0005  # penalize at 0.05% drop
         penalty = 0.0
 
         if loss < penalty_threshold:
             # exponential penalty
-            penalty = 5 * np.exp(50 * abs(loss))
+            penalty = 10 * np.exp(100 * abs(loss))
 
         raw_reward = gain - loss - penalty
 
         # soft clipping on reward
         reward = max(min(raw_reward, 0.01), -0.01)
         return reward
+
+    def step(self, model_params, acc_clean_before, acc_clean_after, acc_mal_before, acc_mal_after):
+        # Compute next state
+        next_state = self.get_state(model_params)
+        # Compute reward
+        reward = self.compute_reward(acc_clean_before, acc_clean_after, acc_mal_before, acc_mal_after)
+        # Store transition
+        if self.last_state is not None and self.last_action is not None:
+            self.model.store_transition(self.last_state, self.last_action, reward, next_state)
+            self.model.train_step()
+        # Update last state/action
+        self.last_state = next_state
+
 

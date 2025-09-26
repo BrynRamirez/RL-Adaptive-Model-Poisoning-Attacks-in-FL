@@ -1,0 +1,5 @@
+rounds = 50
+clients = 20
+aggregation strategy = MultiKrum
+datasets = mnist, cifar10, emnist, cifar100
+RL attack strategy poisoning_strengths = [0.0, 0.01, 0.02, 0.03, 0.04]

@@ -119,20 +119,6 @@ class AggregateCustomMetricStrategy(FedAvg):
         global_acc = weighted_avg(total_accuracy, total_weights)
         global_loss = weighted_avg(total_loss, total_weights)
 
-
-
-        #clean_metrics = [res.metrics for _, res in results if not res.metrics.get("is_malicious", False)]
-        #mal_metrics = [res.metrics for _, res in results if res.metrics.get("is_malicious", False)]
-
-        #clean_acc = float(np.mean([m["accuracy"] for m in clean_metrics]) if clean_metrics else 0.0)
-        #clean_loss = float(np.mean([m["loss"] for m in clean_metrics]) if clean_metrics else 0.0)
-
-        #mal_acc = float(np.mean([m["accuracy"] for m in mal_metrics]) if mal_metrics else 0.0)
-        #mal_loss = float(np.mean([m["loss"] for m in mal_metrics]) if mal_metrics else 0.0)
-
-        #global_acc = float(np.mean([res.metrics["accuracy"] for _, res in results]))
-        #global_loss = float(np.mean([res.metrics["loss"] for _, res in results]))
-
         update_norms = [res.metrics.get("update_norm", 0.0) for _, res in results]
         client_accuracies = [res.metrics.get("accuracy", 0.0) for _, res in results]
         keep_rate = len(results) / self.total_clients if self.total_clients else 0.0

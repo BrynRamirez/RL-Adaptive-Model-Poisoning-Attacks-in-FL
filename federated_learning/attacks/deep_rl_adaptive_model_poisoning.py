@@ -122,7 +122,7 @@ class RLAdaptiveModelPoisoning:
 
     def poison(self, action, model):
         # Define how action maps to poisoning strength or strategy
-        poisoning_strengths = [0.0, 0.01, 0.02, 0.03, 0.04]
+        poisoning_strengths = [0.0, 0.001, 0.002, 0.003, 0.005]
         strength = poisoning_strengths[action]
         print(f"[RL] Action: {action}, Strength: {strength}")
 
